@@ -225,7 +225,7 @@ Papers using M3
 
 #. "Preparing valence-bond-solid states on noisy intermediate-scale quantum computers", Bruno Murta, Pedro M. Q. Cruz, and J. Fernández-Rossier, `Phys. Rev. Research 5, 013190 (2023) <https://doi.org/10.1103/PhysRevResearch.5.013190>`_.
 
-#. "Configurable Readout Error Mitigation in Quantum Workflows ", Beisel M, Barzen J, Leymann F, Truger F, Weder B, Yussupov V, `Electronics. 2022; 11(19):2983 < https://doi.org/10.3390/electronics11192983>`_.
+#. "Configurable Readout Error Mitigation in Quantum Workflows ", Beisel M, Barzen J, Leymann F, Truger F, Weder B, Yussupov V, `Electronics. 2022; 11(19):2983 <https://doi.org/10.3390/electronics11192983>`_.
 
 #. "Quantum Algorithm for Imaginary-Time Green’s Functions", Diksha Dhawan, Dominika Zgid, Mario Motta, `J. Chem. Theory Comput. 2024, 20, 11, 4629 <https://doi.org/10.1021/acs.jctc.4c00241>`_.
 
@@ -244,4 +244,21 @@ Papers using M3
 #. "Quantum Gaussian process regression for Bayesian optimization", Frederic Rapp & Marco Roth, `Quantum Mach. Intell. 6, 5 (2024) <https://doi.org/10.1007/s42484-023-00138-9>`_.
 
 #. "Quantum Ising model on two-dimensional anti–de Sitter space", Muhammad Asaduzzaman, Simon Catterall, Yannick Meurice, and Goksu Can Toga, `Phys. Rev. D 109, 054513 (2024) <https://doi.org/10.1103/PhysRevD.109.054513>`_.
+
+#. "Advances in Quantum Computation and Quantum Technologies: A Design Automation Perspective", G. De Micheli, J. -H. R. Jiang, R. Rand, K. Smith and M. Soeken, `IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 12, no. 3, pp. 584 (2022) <https://doi.org/10.1109/JETCAS.2022.3205174>`_.
+
+#. "Performance Study of Variational Quantum Algorithms for Solving the Poisson Equation on a Quantum Computer", Mazen Ali and Matthias Kabel, `Phys. Rev. Applied 20, 014054 (2023) <https://doi.org/10.1103/PhysRevApplied.20.014054>`_.
+
+#. "Leveraging quantum computing for dynamic analyses of logical networks in systems biology", Weidner, Felix M. et al., `Patterns, Volume 4, Issue 3, 100705  (2023) <https://doi.org/10.1016/j.patter.2023.100705>`_.
+
+#. "Improved financial forecasting via quantum machine learning", Thakkar, S., Kazdaghli, S., Mathur, N. et al., `Quantum Mach. Intell. 6, 27 (2024) <https://doi.org/10.1007/s42484-024-00157-0>`_.
+
+#. "Evaluating the resilience of variational quantum algorithms to leakage noise", Chen Ding, Xiao-Yue Xu, Shuo Zhang, He-Liang Huang, and Wan-Su Bao, `Phys. Rev. A 106, 042421 (2022) <https://doi.org/10.1103/PhysRevA.106.042421>`_.
+
+#. "Characterizing and mitigating coherent errors in a trapped ion quantum processor using hidden inverses", Majumder, Swarnadeep and Yale, Christopher G. and Morris, Titus D. and Lobser, Daniel S. and Burch, Ashlyn D. and Chow, Matthew N. H. and Revelle, Melissa C. and Clark, Susan M. and Pooser, Raphael C., `Quantum 7, 1006 (2023) <https://doi.org/10.22331/q-2023-05-15-1006>`_.
+
+#. "Demonstrating quantum computation for quasiparticle band structures", Takahiro Ohgoe, Hokuto Iwakiri, Masaya Kohda, Kazuhide Ichikawa, Yuya O. Nakagawa, Hubert Okadome Valencia, and Sho Koh, `Phys. Rev. Research 6, L022022 (2024) <https://doi.org/10.1103/PhysRevResearch.6.L022022>`_.
+
+#. "Ising meson spectroscopy on a noisy digital quantum simulator", Lamb, C., Tang, Y., Davis, R. et al., `Nat Commun 15, 5901 (2024) <https://doi.org/10.1038/s41467-024-50206-2>`_.
+
 
