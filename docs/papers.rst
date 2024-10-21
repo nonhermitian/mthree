@@ -207,3 +207,41 @@ Papers using M3
 
 #. "Simulating large-size quantum spin chains on cloud-based superconducting quantum computers", Hongye Yu (余泓烨), Yusheng Zhao, and Tzu-Chieh Wei, `Phys. Rev. Research 5, 013183 (2023) <https://doi.org/10.1103/PhysRevResearch.5.013183>`_.
 
+#. "Steering-enhanced quantum metrology using superpositions of noisy phase shifts", Kuan-Yi Lee, Jhen-Dong Lin, Adam Miranowicz, Franco Nori, Huan-Yu Ku, and Yueh-Nan Chen, `Phys. Rev. Research 5, 013103 (2023) <https://doi.org/10.1103/PhysRevResearch.5.013103>`_.
+
+#. "Effective calculation of the Green's function in the time domain on near-term quantum processors", Francesco Libbi, Jacopo Rizzo, Francesco Tacchino, Nicola Marzari, and Ivano Tavernelli, `Phys. Rev. Research 4, 043038 (2022) <https://doi.org/10.1103/PhysRevResearch.4.043038>`_.
+
+#. "N-Electron Valence Perturbation Theory with Reference Wave Functions from Quantum Computing: Application to the Relative Stability of Hydroxide Anion and Hydroxyl Radical", Alessandro Tammaro, Davide E. Galli, Julia E. Rice, Mario Motta, `J. Phys. Chem. A 2023, 127, 3, 817–827 <https://doi.org/10.1021/acs.jpca.2c07653>`_.
+
+#. "Efficient quantum readout-error mitigation for sparse measurement outcomes of near-term quantum devices", Bo Yang, Rudy Raymond, and Shumpei Uno, `Phys. Rev. A 106, 012423 (2022) <https://doi.org/10.1103/PhysRevA.106.012423>`_.
+
+#. "Finite-size criticality in fully connected spin models on superconducting quantum hardware", Michele Grossi, Oriel Kiss, Francesco De Luca, Carlo Zollo, Ian Gremese, and Antonio Mandarino, `Phys. Rev. E 107, 024113 (2023) <https://doi.org/10.1103/PhysRevE.107.024113>`_.
+
+#. "Hybrid Gate-Pulse Model for Variational Quantum Algorithms", Zhiding Liang; Zhixin Song; Jinglei Cheng; Zichang He; Ji Liu; Hanrui Wang, `60th ACM/IEEE Design Automation Conference (DAC) (2023) <https://doi.org/10.1109/DAC56929.2023.10247923>`_.
+
+#. "Computing the Many-Body Green’s Function with Adaptive Variational Quantum Dynamics", Niladri Gomes, David B. Williams-Young, Wibe A. de Jong, `J. Chem. Theory Comput. 2023, 19, 11, 3313 <https://doi.org/10.1021/acs.jctc.3c00150>`_.
+
+#. "Characterizing Crosstalk of Superconducting Transmon Processors", Andreas Ketterer and Thomas Wellens, `Phys. Rev. Applied 20, 034065 (2023) <https://doi.org/10.1103/PhysRevApplied.20.034065>`_.
+
+#. "Preparing valence-bond-solid states on noisy intermediate-scale quantum computers", Bruno Murta, Pedro M. Q. Cruz, and J. Fernández-Rossier, `Phys. Rev. Research 5, 013190 (2023) <https://doi.org/10.1103/PhysRevResearch.5.013190>`_.
+
+#. "Configurable Readout Error Mitigation in Quantum Workflows ", Beisel M, Barzen J, Leymann F, Truger F, Weder B, Yussupov V, `Electronics. 2022; 11(19):2983 < https://doi.org/10.3390/electronics11192983>`_.
+
+#. "Quantum Algorithm for Imaginary-Time Green’s Functions", Diksha Dhawan, Dominika Zgid, Mario Motta, `J. Chem. Theory Comput. 2024, 20, 11, 4629 <https://doi.org/10.1021/acs.jctc.4c00241>`_.
+
+#. "Best Practices for Quantum Error Mitigation with Digital Zero-Noise Extrapolation", Ritajit Majumdar; Pedro Rivero; Friedrike Metz; Areeq Hasan; Derek S. Wang, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.00102>`_.
+
+#. "Conditional Born machine for Monte Carlo event generation", Oriel Kiss, Michele Grossi, Enrique Kajomovitz, and Sofia Vallecorsa, `Phys. Rev. A 106, 022612 (2022) <https://doi.org/10.1103/PhysRevA.106.022612>`_.
+
+#. "Quantum approximate optimization via learning-based adaptive optimization", Cheng, L., Chen, YQ., Zhang, SX. et al., `Commun Phys 7, 83 (2024) <https://doi.org/10.1038/s42005-024-01577-x>`_.
+
+#. "Folded Spectrum VQE: A Quantum Computing Method for the Calculation of Molecular Excited States", Lila Cadi Tazi, Alex J. W. Thom, `J. Chem. Theory Comput. 2024, 20, 6, 2491 <https://doi.org/10.1021/acs.jctc.3c01378>`_.
+
+#. "Snowmass White Paper: Quantum Computing Systems and Software for High-energy Physics Research", Travis S. Humble, Andrea Delgado, Raphael Pooser, Christopher Seck, Ryan Bennink, Vicente Leyton-Ortega, C.-C. Joseph Wang, Eugene Dumitrescu, Titus Morris, Kathleen Hamilton, Dmitry Lyakh, Prasanna Date, Yan Wang, Nicholas A. Peters, Katherine J. Evans, Marcel Demarteau, Alex McCaskey, Thien Nguyen, Susan Clark, Melissa Reville, Alberto Di Meglio, Michele Grossi, Sofia Vallecorsa, Kerstin Borras, Karl Jansen, Dirk Krücker, `arXiv:2203.07091 <https://doi.org/10.48550/arXiv.2203.07091>`_.
+
+#. "Adaptive POVM implementations and measurement error mitigation strategies for near-term quantum devices", Adam Glos, Anton Nykänen, Elsi-Mari Borrelli, Sabrina Maniscalco, Matteo A. C. Rossi, Zoltán Zimborás, Guillermo García-Pérez, `arXiv:2208.07817 <https://doi.org/10.48550/arXiv.2208.07817>`_.
+
+#. "Quantum Gaussian process regression for Bayesian optimization", Frederic Rapp & Marco Roth, `Quantum Mach. Intell. 6, 5 (2024) <https://doi.org/10.1007/s42484-023-00138-9>`_.
+
+#. "Quantum Ising model on two-dimensional anti–de Sitter space", Muhammad Asaduzzaman, Simon Catterall, Yannick Meurice, and Goksu Can Toga, `Phys. Rev. D 109, 054513 (2024) <https://doi.org/10.1103/PhysRevD.109.054513>`_.
+
