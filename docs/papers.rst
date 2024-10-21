@@ -297,8 +297,74 @@ Papers using M3
 
 #. "Universal framework for simultaneous tomography of quantum states and SPAM noise", Abhijith Jayakumar, Stefano Chessa, Carleton Coffrin, Andrey Y. Lokhov, Marc Vuffray, Sidhant Misra, `Quantum 8, 1426 (2024) <https://doi.org/10.22331/q-2024-07-30-1426>`_.
 
+#. "Stochastic Approximation of Variational Quantum Imaginary Time Evolution", Julien Gacon; Christa Zoufal; Giuseppe Carleo; Stefan Woerner, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.10367741>`_.
 
+#. "Simulating Polaritonic Ground States on Noisy Quantum Devices", Mohammad Hassan, Mohammad Hassan, Fabijan Pavošević, Derek S. Wang, Johannes Flick, `Phys. Chem. Lett. 2024, 15, 5, 1373 <https://doi.org/10.1021/acs.jpclett.3c02875>`_.
 
+#. "High-fidelity realization of the AKLT state on a NISQ-era quantum processors", Tianqi Chen, Ruizhe Shen, Ching Hua Lee, Bo Yang, `SciPost Phys. 15, 170 (2023) <https://doi.org/ 10.21468/SciPostPhys.15.4.170>`_.
 
+#. "Error mitigated quantum circuit cutting", Ritajit Majumdar, Christopher J. Wood, `arXiv:2211.13431 <https://doi.org/10.48550/arXiv.2211.13431>`_.
 
+#. "Quantum computation of π → π* and n → π* excited states of aromatic heterocycles", Castellanos, M. A., Motta, M., & Rice, J. E., `Molecular Physics, 122(7–8) (2023) <https://doi.org/10.1080/00268976.2023.2282736>`_.
 
+#. "QuCT: A Framework for Analyzing Quantum Circuit by Extracting Contextual and Topological Features", Tan, Siwei and Lang, Congliang and Xiang, Liang and Wang, Shudi and Jia, Xinghui and Tan, Ziqi and Li, Tingting and Yin, Jieming and Shang, Yongheng and Python, Andre and Lu, Liqiang and Yin, Jianwei, `Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture (2023) <https://doi.org/10.1145/3613424.36142746>`_.
+
+#. "Fair Sampling Error Analysis on NISQ Devices", Golden, John and Bartschi, Andreas and O’Malley, Daniel and Eidenbenz, Stephan, `ACM Transactions on Quantum Computing 3, 8 (2022)  <https://doi.org/10.1145/3510857>`_.
+
+#. "Quantum circuits for discrete graphical models", Piatkowski, N., Zoufal, C., `Quantum Mach. Intell. 6, 37 (2024) <https://doi.org/10.1007/s42484-024-00175-y>`_.
+
+#. "Benchmarking noisy intermediate scale quantum error mitigation strategies for ground state preparation of the HCl molecule", Tim Weaving, Alexis Ralli, William M. Kirby, Peter J. Love, Sauro Succi, and Peter V. Coveney, `Phys. Rev. Research 5, 043054 (2024) <https://doi.org/10.1103/PhysRevResearch.5.043054>`_.
+
+#. "Braiding fractional quantum Hall quasiholes on a superconducting quantum processor", Ammar Kirmani, Derek S. Wang, Pouyan Ghaemi, and Armin Rahmani, `Phys. Rev. B 108, 064303 (2023) <https://doi.org/10.1103/PhysRevB.108.064303>`_.
+
+#. "Mitigating Coupling Map Constrained Correlated Measurement Errors on Quantum Devices", Robertson, Alan and Song, Shuaiwen, `Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (2023) <https://doi.org/10.1145/3581784.3607039>`_.
+
+#. "Modular quantum circuits for secure communication", Andrea Ceschini, Antonello Rosato, Massimo Panella, `IET Quantum Communication 4, 208 (2023) <https://doi.org/10.1049/qtc2.12065>`_.
+
+#. "Amplitude-based implementation of the unit step function on a quantum computer", Jonas Koppe and Mark-Oliver Wolf, `Phys. Rev. A 107, 022606 (2023) <https://doi.org/10.1103/PhysRevA.107.022606>`_.
+
+#. "Perturbative readout-error mitigation for near-term quantum computers", Evan Peters, Andy C. Y. Li, and Gabriel N. Perdue, `Phys. Rev. A 107, 062426 (2023) <https://doi.org/10.1103/PhysRevA.107.062426>`_.
+
+#. "Calculation of the moscovium ground-state energy by quantum algorithms", V. A. Zaytsev, M. E. Groshev, I. A. Maltsev, A. V. Durova, V. M. Shabaev, `International Journal of Quantum Chemistry 124, e27232 (2023) <https://doi.org/10.1002/qua.272326>`_.
+
+#. "Scalable evaluation of incoherent infidelity in quantum devices", Jader P. Santos, Ivan Henao, Raam Uzdin, `arXiv:2305.19359 <https://doi.org/10.48550/arXiv.2305.19359>`_.
+
+#. "Application of the Variational Quantum Eigensolver to the Ultimate Pit Problem", Yousef Hindy; Jessica Pointing; Meltem Tolunay; Sreeram Venkatarao; Mario Motta; Joseph A. Latone, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.00083>`_.
+
+#. "Dynamical mean-field theory for the Hubbard-Holstein model on a quantum device", Steffen Backes, Yuta Murakami, Shiro Sakai, and Ryotaro Arita, `Phys. Rev. B 107, 165155 (2023) <https://doi.org/10.1103/PhysRevB.107.165155>`_.
+
+#. "Identifying Bottlenecks of NISQ-friendly HHL algorithms", Marc Andreu Marfany, Alona Sakhnenko, Jeanette Miriam Lorenz, `arXiv:2406.06288 <https://doi.org/10.48550/arXiv.2406.06288>`_.
+
+#. "Dual-GSE: Resource-efficient Generalized Quantum Subspace Expansion", Bo Yang, Nobuyuki Yoshioka, Hiroyuki Harada, Shigeo Hakkaku, Yuuki Tokunaga, Hideaki Hakoshima, Kaoru Yamamoto, Suguru Endo, `arXiv:2309.14171 <https://doi.org/10.48550/arXiv.2309.14171>`_.
+
+#. "Energy Risk Analysis with Dynamic Amplitude Estimation and Piecewise Approximate Quantum Compiling", K. Ghosh et al, `IEEE Transactions on Quantum Engineering <https://doi.org/10.1109/TQE.2024.3425969>`_.
+
+#. "QuFEM: Fast and Accurate Quantum Readout Calibration Using the Finite Element Method", Tan, Siwei and Lu, Liqiang and Zhang, Hanyu and Yu, Jia and Lang, Congliang and Shang, Yongheng and Zhao, Xinkui and Chen, Mingshuai and Liang, Yun and Yin, Jianwei, `ASPLOS '24: Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems <https://doi.org/10.1145/3620665.3640380>`_.
+
+#. "Quantum Risk Analysis: Beyond (Conditional) Value-at-Risk", Christian Laudagé, Ivica Turkalj, `arXiv:2211.04456 <https://doi.org/10.48550/arXiv.2211.04456>`_.
+
+#. "Correlation thresholds for effective composite pulse quantum error mitigation", Ido Kaplan, Haim Suchowski, Yaron Oz, `arXiv:2308.08691 <https://doi.org/10.48550/arXiv.2308.08691>`_.
+
+#. "Robust design under uncertainty in quantum error mitigation", Piotr Czarnik, Michael McKerns, Andrew T. Sornborger, Lukasz Cincio, `arXiv:2307.05302 <https://doi.org/10.48550/arXiv.2307.05302>`_.
+
+#. "Qubit Assignment Using Time Reversal", Evan Peters, Prasanth Shyamsundar, Andy C.Y. Li, and Gabriel Perdue, `PRX Quantum 3, 040333 (2022) <https://doi.org/10.1103/PRXQuantum.3.040333>`_.
+
+#. "Quantum Simulations for Carbon Capture on Metal-Organic Frameworks", Gopal Ramesh Dahale, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE), <https://doi.org/10.1109/QCE57702.2023.10189>`_.
+
+#. "Measuring qubit stability in a gate-based NISQ hardware processor", Yeter-Aydeniz, K., Parks, Z., Thekkiniyedath, A.N. et al., `Quantum Inf Process 22, 96 (2023), <https://doi.org/10.1007/s11128-023-03826-4>`_.
+
+#. "Self-consistent quantum measurement tomography based on semidefinite programming", Marco Cattaneo, Matteo A. C. Rossi, Keijo Korhonen, Elsi-Mari Borrelli, Guillermo García-Pérez, Zoltán Zimborás, and Daniel Cavalcanti, `Phys. Rev. Research 5, 033154 (2023), <https://doi.org/10.1103/PhysRevResearch.5.033154>`_.
+
+#. "Adaptive variational simulation for open quantum systems", Huo Chen, Niladri Gomes, Siyuan Niu, Wibe Albert de Jong, `Quantum 8, 1252 (2024), <https://doi.org/10.22331/q-2024-02-13-1252>`_.
+
+#. "Conditions for a quadratic quantum speedup in nonlinear transforms with applications to energy contract pricing", Gabriele Agliardi, Corey O'Meara, Kavitha Yogaraj, Kumar Ghosh, Piergiacomo Sabino, Marina Fernández-Campoamor, Giorgio Cortiana, Juan Bernabé-Moreno, Francesco Tacchino, Antonio Mezzacapo, Omar Shehab, `arXiv:2304.10385 <https://doi.org/10.48550/arXiv.2304.10385>`_.
+
+#. "Error estimation in current noisy quantum computers", Aseguinolaza, U., Sobrino, N., Sobrino, G. et al, `Quantum Inf Process 23, 181 (2024), <https://doi.org/10.1007/s11128-024-04384-z>`_.
+
+#. "Probing The Unitarity of Quantum Evolution Through Periodic Driving", Alaina M. Green, Tanmoy Pandit, C. Huerta Alderete, Norbert M. Linke, Raam Uzdin, `arXiv:2212.10771 <https://doi.org/10.48550/arXiv.2212.10771>`_.
+
+#. "Universal compilation for quantum state preparation and tomography", Vu Tuan Hai, Le Bin Ho, `arXiv:2204.11635 <https://doi.org/10.48550/arXiv.2204.11635>`_.
+
+#. "Folding-Free ZNE: A Comprehensive Quantum Zero-Noise Extrapolation Approach for Mitigating Depolarizing and Decoherence Noise", Hrushikesh Pramod Patil; Peiyi Li; Ji Liu; Huiyang Zhou, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE), <https://doi.org/10.1109/QCE57702.2023.00104>`_.
+
+#. "Testing the necessity of complex numbers in quantum mechanics with IBM quantum computers", Jarrett L. Lancaster, Nicholas M. Palladino, `arXiv:2205.01262 <https://doi.org/10.48550/arXiv.2205.01262>`_.
