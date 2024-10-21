@@ -261,4 +261,44 @@ Papers using M3
 
 #. "Ising meson spectroscopy on a noisy digital quantum simulator", Lamb, C., Tang, Y., Davis, R. et al., `Nat Commun 15, 5901 (2024) <https://doi.org/10.1038/s41467-024-50206-2>`_.
 
+#. "Adaptive quantum error mitigation using pulse-based inverse evolutions", Henao, I., Santos, J.P. & Uzdin, R., `npj Quantum Inf 9, 120 (2023) <https://doi.org/10.1038/s41534-023-00785-7>`_.
+
+#. "Quantum Natural Policy Gradients: Towards Sample-Efficient Reinforcement Learning", N. Meyer, D. D. Scherer, A. Plinge, C. Mutschler and M. J. Hartmann, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.10181>`_.
+
+#. "Extending the variational quantum eigensolver to finite temperatures", Johannes Selisko et al, `2024 Quantum Sci. Technol. 9 015026 <https://doi.org/10.1088/2058-9565/ad1340>`_.
+
+#. "A Robust Large-Period Discrete Time Crystal and its Signature in a Digital Quantum Computer", Tianqi Chen, Ruizhe Shen, Ching Hua Lee, Bo Yang, Raditya Weda Bomantara, `arXiv:2309.11560 <https://doi.org/10.48550/arXiv.2309.11560>`_.
+
+#. "Explaining Quantum Circuits with Shapley Values: Towards Explainable Quantum Machine Learning", Raoul Heese, Thore Gerlach, Sascha Mücke, Sabine Müller, Matthias Jakobs, Nico Piatkowski, `arXiv:2301.09138 <https://doi.org/10.48550/arXiv.2301.09138>`_.
+
+#. "Shallow unitary decompositions of quantum Fredkin and Toffoli gates for connectivity-aware equivalent circuit averaging", Pedro M. Q. Cruz, Bruno Murta, `APL Quantum 1, 016105 (2024) <https://doi.org/10.1063/5.0187026>`_.
+
+#. "A Bayesian Approach for Characterizing and Mitigating Gate and Measurement Errors", Zheng, Muqing and Li, Ang and Terlaky, Tamas and Yang, Xiu, `ACM Transactions on Quantum Computing 4, 21 (2023)  <https://doi.org/10.1145/3563397>`_.
+
+#. "Quantum simulations of molecular systems with intrinsic atomic orbitals", Stefano Barison, Davide E. Galli, and Mario Motta, `Phys. Rev. A 106, 022404 (2023) <https://doi.org/10.1103/PhysRevA.106.022404>`_.
+
+#. "Hardware-Tailored Diagonalization Circuits", Daniel Miller, Laurin E. Fischer, Kyano Levi, Eric J. Kuehnke, Igor O. Sokolov, Panagiotis Kl. Barkoutsos, Jens Eisert, Ivano Tavernelli, `arXiv:2203.03646 <https://doi.org/10.48550/arXiv.2203.03646>`_.
+
+#. "Information-theoretic approach to readout-error mitigation for quantum computers", Hai-Chau Nguyen, `Phys. Rev. A 108, 052419 (2023) <https://doi.org/10.1103/PhysRevA.108.052419>`_.
+
+#. "Defining Best Practices for Quantum Benchmarks", Mirko Amico; Helena Zhang; Petar Jurcevic; Lev S. Bishop; Paul Nation; Andrew Wack, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.00084>`_.
+
+#. "Simulating Majorana zero modes on a noisy quantum processor", Kevin J Sung et al , `2023 Quantum Sci. Technol. 8 025010 <https://doi.org/10.1088/2058-9565/acb796>`_.
+
+#. "Noise-resistant quantum state compression readout", Ding, C., Xu, XY., Niu, YF. et al , `Sci. China Phys. Mech. Astron. 66, 230311 (2023) <https://doi.org/10.1007/s11433-022-2005-x>`_.
+
+#. "Quantum Conformal Prediction for Reliable Uncertainty Quantification in Quantum Machine Learning", S. Park and O. Simeone, `EEE Transactions on Quantum Engineering, vol. 5, pp. 1-24, 2024 <https://doi.org/10.1109/TQE.2023.3333224>`_.
+
+#. "Variational preparation of entangled states on quantum computers", Vu Tuan Hai, Nguyen Tan Viet, Le Bin Ho, `arXiv:2306.174226 <https://doi.org/10.48550/arXiv.2306.17422>`_.
+
+#. "PyQBench: A Python library for benchmarking gate-based quantum computers", Konrad Jałowiecki, Paulina Lewandowska, Łukasz Pawela, `SoftwareX 24, 101558 (2023) <https://doi.org/10.1016/j.softx.2023.101558>`_.
+
+#. "Mapping Topology-Localization Phase Diagram with Quasiperiodic Disorder Using a Programmable Superconducting Simulator", Xuegang Li, Huikai Xu, Junhua Wang, Ling-Zhi Tang, Dan-Wei Zhang, Chuhong Yang, Tang Su, Chenlu Wang, Zhenyu Mi, Weijie Sun, Xuehui Liang, Mo Chen, Chengyao Li, Yingshan Zhang, Kehuan Linghu, Jiaxiu Han, Weiyang Liu, Yulong Feng, Pei Liu, Guangming Xue, Jingning Zhang, Yirong Jin, Shi-Liang Zhu, Haifeng Yu, S. P. Zhao, Qi-Kun Xue, `arXiv:2301.12138 <https://doi.org/10.48550/arXiv.2301.12138>`_.
+
+#. "Universal framework for simultaneous tomography of quantum states and SPAM noise", Abhijith Jayakumar, Stefano Chessa, Carleton Coffrin, Andrey Y. Lokhov, Marc Vuffray, Sidhant Misra, `Quantum 8, 1426 (2024) <https://doi.org/10.22331/q-2024-07-30-1426>`_.
+
+
+
+
+
 
