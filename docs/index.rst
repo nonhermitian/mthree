@@ -36,6 +36,7 @@ measurements; it cannot mitigate single-shot measurements used for conditional-g
     self
     Installation <installation>
     Citing <citing>
+    Papers using M3 <papers>
 
 .. toctree::
     :maxdepth: 1
