@@ -73,7 +73,7 @@ Papers using M3
 
 #. "Quantum Tunneling: From Theory to Error-Mitigated Quantum Simulation", Sorana Catrina, Alexandra Băicoianu, `Adv. Quantum Technol. 2024, 2400163 <https://doi.org/10.1002/qute.202400163>`_.
 
-#. "Analyzing the Temporal Behavior of Noisy Intermediate-Scale Quantum Nodes and Algorithm Fidelity", Carlo Podda, Giuliana Siddi Moreau, Lorenzo Pisani, Lidia Leoni, Giacomo Cao, `Adv. Quantum Technol. 2024, 2300451 < https://doi.org/10.1002/qute.202300451>`_.
+#. "Analyzing the Temporal Behavior of Noisy Intermediate-Scale Quantum Nodes and Algorithm Fidelity", Carlo Podda, Giuliana Siddi Moreau, Lorenzo Pisani, Lidia Leoni, Giacomo Cao, `Adv. Quantum Technol. 2024, 2300451 <https://doi.org/10.1002/qute.202300451>`_.
 
 #. "Surrogate optimization of variational quantum circuits", Erik J. Gustafson, Juha Tiihonen, Diana Chamaki, Farshud Sorourifar, J. Wayne Mullinax, Andy C. Y. Li, Filip B. Maciejewski, Nicolas PD Sawaya, Jaron T. Krogel, David E. Bernal Neira, Norm M. Tubman, `arXiv:2404.02951 <https://doi.org/10.48550/arXiv.2404.02951>`_.
 
@@ -145,4 +145,65 @@ Papers using M3
 
 #. "Provable bounds for noise-free expectation values computed from noisy samples", Samantha V. Barron, Daniel J. Egger, Elijah Pelofske, Andreas Bärtschi, Stephan Eidenbenz, Matthis Lehmkuehler, Stefan Woerner, `arXiv:2312.00733 <https://doi.org/10.48550/arXiv.2312.00733>`_.
 
+#. "Exploiting Maximally Mixed States for Spectral Estimation by Time Evolution", Kaelyn J. Ferris, Zihang Wang, Itay Hen, Amir Kalev, Nicholas T. Bronn, Vojtech Vlcek, `arXiv:2312.00687 <https://doi.org/10.48550/arXiv.2312.00687>`_.
+
+#. "Quantum simulations for strong-field QED", Luis Hidalgo and Patrick Draper, `Phys. Rev. D 109, 076004 (2024) <https://doi.org/10.1103/PhysRevD.109.076004>`_.
+
+#. "Quantum Simulation of an Open System: A Dissipative 1+1D Ising Model", Erik Gustafson, Michael Hite, Jay Hubisz, Bharath Sambasivam, Judah Unmuth-Yockey, `arXiv:2311.18728 <https://doi.org/10.48550/arXiv.2311.18728>`_.
+
+#. "Improving the performance of digitized counterdiabatic quantum optimization via algorithm-oriented qubit mapping", Yanjun Ji, Kathrin F. Koenig, and Ilia Polian, `Phys. Rev. A 110, 032421 (2024) <https://doi.org/10.1103/PhysRevA.110.032421>`_.
+
+#. "Quantum Diffusion Models", Andrea Cacioppo, Lorenzo Colantonio, Simone Bordoni, Stefano Giagu, `arXiv:2311.15444 <https://doi.org/10.48550/arXiv.2311.15444>`_.
+
+#. "An approach to solve the coarse-grained Protein folding problem in a Quantum Computer", Jaya Vasavi P, Soham Bopardikar, Avinash D, Ashwini K, Kalyan Dasgupta, Sanjib Senapati, `arXiv:2311.14141 <https://doi.org/10.48550/arXiv.2311.14141>`_.
+
+#. "Perspectives of running self-consistent DMFT calculations for strongly correlated electron systems on noisy quantum computing hardware", Jannis Ehrlich, Daniel Urban, Christian Elsässer, `arXiv:2311.10402 <https://doi.org/10.48550/arXiv.2311.10402>`_.
+
+#. "Observation of the non-Hermitian skin effect and Fermi skin on a digital quantum computer", Ruizhe Shen, Tianqi Chen, Bo Yang, Ching Hua Lee, `arXiv:2311.10143 <https://doi.org/10.48550/arXiv.2311.10143>`_.
+
+#. "Comparison of current quantum devices for quantum computing of Heisenberg spin chain dynamics", Erik Lötstedt and Kaoru Yamanouchi, `Chemical Physics Letters 836, 140975 (2024) <https://doi.org/10.1016/j.cplett.2023.140975>`_.
+
+#. "ADAPT-QSCI: Adaptive Construction of Input State for Quantum-Selected Configuration Interaction", Yuya O. Nakagawa, Masahiko Kamoshita, Wataru Mizukami, Shotaro Sudo, Yu-ya Ohnishi, `arXiv:2311.01105 <https://doi.org/10.48550/arXiv.2311.01105>`_.
+
+#. "Efficient separate quantification of state preparation errors and measurement errors on quantum computers and their mitigation", Hongye Yu, Tzu-Chieh Wei, `arXiv:2310.18881 <https://doi.org/10.48550/arXiv.2310.18881>`_.
+
+#. "Quantum error mitigation", Zhenyu Cai, Ryan Babbush, Simon C. Benjamin, Suguru Endo, William J. Huggins, Ying Li, Jarrod R. McClean, and Thomas E. O’Brien, `Rev. Mod. Phys. 95, 045005 (2023) <https://doi.org/10.1103/RevModPhys.95.045005>`_.
+
+#. "Quantum Simulation for High-Energy Physics", Christian W. Bauer et al., `PRX Quantum 4, 027001 (2023) <https://doi.org/10.1103/PRXQuantum.4.027001>`_.
+
+#. "Scalable Circuits for Preparing Ground States on Digital Quantum Computers: The Schwinger Model Vacuum on 100 Qubits", Roland C. Farrell, Marc Illa, Anthony N. Ciavarella, and Martin J. Savage, `PRX Quantum 5, 020315  (2024) <https://doi.org/10.1103/PRXQuantum.5.020315>`_.
+
+#. "Near-term quantum computing techniques: Variational quantum algorithms, error mitigation, circuit compilation, benchmarking and classical simulation", Huang, HL., Xu, XY., Guo, C. et al., `Sci. China Phys. Mech. Astron. 66, 250302 (2023) <https://doi.org/10.1007/s11433-022-2057-y>`_.
+
+#. "Scaling of the quantum approximate optimization algorithm on superconducting qubit based hardware", Johannes Weidenfeller, Lucia C. Valor, Julien Gacon, Caroline Tornow, Luciano Bello, Stefan Woerner, Daniel J. Egger, `Quantum 6, 870 (2022) <https://doi.org/10.22331/q-2022-12-07-870>`_.
+
+#. "Deterministic Constant-Depth Preparation of the AKLT State on a Quantum Processor Using Fusion Measurements", Kevin C. Smith, Eleanor Crane, Nathan Wiebe, and S.M. Girvin, `PRX Quantum 4, 020315 (2023) <https://doi.org/10.1103/PRXQuantum.4.020315>`_.
+
+#. "Biology and medicine in the landscape of quantum advantages", Benjamin A. Cordier, Nicolas P. D. Sawaya, Gian Giacomo Guerreschi and Shannon K. McWeeney, `J. R. Soc. Interface.1920220541 <https://doi.org/10.1098/rsif.2022.0541>`_.
+
+#. "Quantum computing of the 6Li nucleus via ordered unitary coupled clusters", Oriel Kiss, Michele Grossi, Pavel Lougovski, Federico Sanchez, Sofia Vallecorsa, and Thomas Papenbrock, `Phys. Rev. C 106, 034325 (2022) <https://doi.org/10.1103/PhysRevC.106.034325>`_.
+
+#. "Demonstration of Algorithmic Quantum Speedup", Bibek Pokharel and Daniel A. Lidar, `Phys. Rev. Lett. 130, 210602 (2023) <https://doi.org/10.1103/PhysRevLett.130.210602>`_.
+
+#. "Digitized Counterdiabatic Quantum Algorithm for Protein Folding", Pranav Chandarana, Narendra N. Hegade, Iraitz Montalban, Enrique Solano, and Xi Chen, `Phys. Rev. Applied 20, 014024 (2023) <https://doi.org/10.1103/PhysRevApplied.20.014024>`_.
+
+#. "Universal Sampling Lower Bounds for Quantum Error Mitigation", Ryuji Takagi, Hiroyasu Tajima, and Mile Gu, `Phys. Rev. Lett. 131, 210602 (2023) <https://doi.org/10.1103/PhysRevLett.131.210602>`_.
+
+#. "Measurement error mitigation in quantum computers through classical bit-flip correction", Lena Funcke, Tobias Hartung, Karl Jansen, Stefan Kühn, Paolo Stornati, and Xiaoyang Wang, `Phys. Rev. A 105, 062404 (2022) <https://doi.org/10.1103/PhysRevA.105.062404>`_.
+
+#. "Measuring nonstabilizerness via multifractal flatness", Xhek Turkeshi, Marco Schirò, and Piotr Sierant, `Phys. Rev. A 108, 042408 (2023) <https://doi.org/10.1103/PhysRevA.108.042408>`_.
+
+#. "Experimental Benchmarking of an Automated Deterministic Error-Suppression Workflow for Quantum Algorithms", Pranav S. Mundada, Aaron Barbosa, Smarak Maity, Yulun Wang, Thomas Merkh, T.M. Stace, Felicity Nielson, Andre R.R. Carvalho, Michael Hush, Michael J. Biercuk, and Yuval Baum, `Phys. Rev. Applied 20, 024034 (2023) <https://doi.org/10.1103/PhysRevApplied.20.024034>`_.
+
+#. "Uncovering Local Integrability in Quantum Many-Body Dynamics", Oles Shtanko, Derek S. Wang, Haimeng Zhang, Nikhil Harle, Alireza Seif, Ramis Movassagh, Zlatko Minev, `arXiv:2307.07552 <https://doi.org/10.48550/arXiv.2307.07552>`_.
+
+#. "Dissipative Dynamics of Graph-State Stabilizers with Superconducting Qubits", Liran Shirizly, Grégoire Misguich, and Haggai Landa, `Phys. Rev. Lett. 132, 010601 (2024) <https://doi.org/10.1103/PhysRevLett.132.010601>`_.
+
+#. "Blueprint for a Molecular-Spin Quantum Processor", A. Chiesa, S. Roca, S. Chicco, M.C. de Ory, A. Gómez-León, A. Gomez, D. Zueco, F. Luis, and S. Carretta, `Phys. Rev. Applied 19, 064060 (2023) <https://doi.org/10.1103/PhysRevApplied.19.064060>`_.
+
+#. "Primitive quantum gates for dihedral gauge theories", M. Sohaib Alam, Stuart Hadfield, Henry Lamm, and Andy C. Y. Li (SQMS Collaboration), `Phys. Rev. D 105, 114501 (2022) <https://doi.org/10.1103/PhysRevD.105.114501>`_.
+
+#. "Pulse variational quantum eigensolver on cross-resonance-based hardware", Daniel J. Egger, Chiara Capecci, Bibek Pokharel, Panagiotis Kl. Barkoutsos, Laurin E. Fischer, Leonardo Guidoni, and Ivano Tavernelli, `Phys. Rev. Research 5, 033159 (2023) <https://doi.org/10.1103/PhysRevResearch.5.033159>`_.
+
+#. "Simulating large-size quantum spin chains on cloud-based superconducting quantum computers", Hongye Yu (余泓烨), Yusheng Zhao, and Tzu-Chieh Wei, `Phys. Rev. Research 5, 013183 (2023) <https://doi.org/10.1103/PhysRevResearch.5.013183>`_.
 
