@@ -34,6 +34,7 @@ def test_load_cals_from_file():
     raw_counts = backend.run(qc).result().get_counts()
     mit = mthree.M3Mitigation(backend)
     mit.cals_from_system(cals_file="cals.json")
+    _ = mit.single_qubit_cals
 
     mit2 = mthree.M3Mitigation()
     mit2.cals_from_file(cals_file="cals.json")
