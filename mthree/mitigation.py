@@ -60,7 +60,9 @@ class M3Mitigation:
             cal_timestamp (str): Time at which cals were taken
             single_qubit_cals (list): 1Q calibration matrices
         """
-        if system.__class__.__name__ == 'IBMBackend' and not isinstance(system, rm.RunningManBackend):
+        if system.__class__.__name__ == "IBMBackend" and not isinstance(
+            system, rm.RunningManBackend
+        ):
             system = rm.RunningManBackend(system)
         self.system = system
         self.system_info = system_info(system) if system else {}
@@ -167,7 +169,7 @@ class M3Mitigation:
             if runtime_mode:
                 self.system.set_mode(runtime_mode, overwrite=True)
             elif not self.system.get_mode():
-                self.system.set_mode('batch')
+                self.system.set_mode("batch")
         if qubits is None:
             qubits = range(self.num_qubits)
             # Remove faulty qubits if any
@@ -392,7 +394,7 @@ class M3Mitigation:
                 )
 
         num_circs = len(trans_qcs)
-        max_circuits = self.system_info['max_circuits']
+        max_circuits = self.system_info["max_circuits"]
         # Determine the number of jobs required
         num_jobs = ceil(num_circs / max_circuits)
         logger.info(
@@ -412,9 +414,12 @@ class M3Mitigation:
         if self.rep_delay:
             self.executor.options.execution.rep_delay = self.rep_delay
         for circs in circs_list:
-            _job = self.system.run(circs, shots=shots,
-                                   rep_delay=self.rep_delay,
-                                   job_tags=["M3 calibration"])
+            _job = self.system.run(
+                circs,
+                shots=shots,
+                rep_delay=self.rep_delay,
+                job_tags=["M3 calibration"],
+            )
             jobs.append(_job)
 
         # Execute job and cal building in new thread.
