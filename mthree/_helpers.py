@@ -13,9 +13,6 @@
 """
 Helper functions
 """
-from qiskit.providers import BackendV2
-from qiskit_ibm_runtime import IBMBackend
-from mthree.exceptions import M3Error
 
 
 def system_info(backend):
@@ -37,10 +34,7 @@ def system_info(backend):
     info_dict["simulator"] = config.simulator
     if "fake" in backend.name:
         info_dict["simulator"] = True
-    # On IBM systems it is max_experiments, on other stuff it might be max_circuits
-    max_circuits = getattr(config, "max_experiments", None)
-    if max_circuits is None:
-        max_circuits = getattr(config, "max_circuits", 1)
+    max_circuits = getattr(config, "max_experiments", 1)
     if config.simulator:
         max_circuits = 1024
     info_dict["max_circuits"] = max_circuits
