@@ -411,8 +411,6 @@ class M3Mitigation:
         ] + [trans_qcs[(num_jobs - 1) * circ_slice :]]
         # Do job submission here
         jobs = []
-        if self.rep_delay:
-            self.executor.options.execution.rep_delay = self.rep_delay
         for circs in circs_list:
             _job = self.system.run(
                 circs,
