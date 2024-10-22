@@ -35,6 +35,8 @@ def system_info(backend):
     _max_shots = config.max_shots
     info_dict["max_shots"] = _max_shots if _max_shots else int(1e6)
     info_dict["simulator"] = config.simulator
+    if "fake" in backend.name:
+        info_dict["simulator"] = True
     # On IBM systems it is max_experiments, on other stuff it might be max_circuits
     max_circuits = getattr(config, "max_experiments", None)
     if max_circuits is None:
