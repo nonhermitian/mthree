@@ -71,7 +71,7 @@ def test_save_cals(tmp_path):
     cal_file = tmp_path / "cal.json"
     mit = mthree.M3Mitigation(backend)
     mit.cals_from_system(cals_file=cal_file)
-    _ = mit.single_qubit_cals #Force waiting since async=True by default
+    _ = mit.single_qubit_cals  # Force waiting since async=True by default
     with open(cal_file, "r", encoding="utf-8") as fd:
         cals = np.array(orjson.loads(fd.read())["cals"], dtype=np.float32)
     assert np.array_equal(mit.single_qubit_cals, cals)
@@ -83,7 +83,7 @@ def test_load_cals(tmp_path):
     backend = FakeAthens()
     mit = mthree.M3Mitigation(backend)
     mit.cals_from_system(cals_file=cal_file)
-    _ = mit.single_qubit_cals #Force waiting since async=True by default
+    _ = mit.single_qubit_cals  # Force waiting since async=True by default
     new_mit = mthree.M3Mitigation(backend)
     new_mit.cals_from_file(cal_file)
     assert np.array_equal(mit.single_qubit_cals, new_mit.single_qubit_cals)
