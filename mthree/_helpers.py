@@ -32,15 +32,16 @@ def system_info(backend):
     config = backend.configuration()
     info_dict["name"] = backend.name
     info_dict["num_qubits"] = config.num_qubits
-    _max_shots = backend.configuration().max_shots
+    _max_shots = config.max_shots
     info_dict["max_shots"] = _max_shots if _max_shots else int(1e6)
-
-    if isinstance(backend, IBMBackend):
-        info_dict["simulator"] = False
-    elif isinstance(backend, BackendV2):
-        info_dict["simulator"] = True
-    else:
-        raise M3Error("Invalid backend passed.")
+    info_dict["simulator"] = config.simulator
+    # On IBM systems it is max_experiments, on other stuff it might be max_circuits
+    max_circuits = getattr(config, "max_experiments", None)
+    if max_circuits is None:
+        max_circuits = getattr(config, "max_circuits", 1)
+    if config.simulator:
+        max_circuits = 1024
+    info_dict["max_circuits"] = max_circuits
     # Look for faulty qubits.  Renaming to 'inoperable' here
     if hasattr(backend, "properties"):
         if hasattr(backend.properties(), "faulty_qubits"):

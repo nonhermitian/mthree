@@ -5,3 +5,4 @@ qiskit>=1.0
 qiskit_ibm_runtime>=0.22
 psutil
 orjson>=3.0.0
+runningman
