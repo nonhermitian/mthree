@@ -23,7 +23,7 @@ import psutil
 import numpy as np
 import orjson
 import runningman as rm
-
+from runningman.utils import is_ibm_backend
 
 from mthree.circuits import (
     _tensor_meas_states,
@@ -60,9 +60,7 @@ class M3Mitigation:
             cal_timestamp (str): Time at which cals were taken
             single_qubit_cals (list): 1Q calibration matrices
         """
-        if system.__class__.__name__ == "IBMBackend" and not isinstance(
-            system, rm.RunningManBackend
-        ):
+        if is_ibm_backend(system):
             system = rm.RunningManBackend(system)
         self.system = system
         self.system_info = system_info(system) if system else {}

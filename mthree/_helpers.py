@@ -34,8 +34,11 @@ def system_info(backend):
     info_dict["simulator"] = config.simulator
     if "fake" in backend.name:
         info_dict["simulator"] = True
+    # max_circuits can be set a couple of ways
     max_circuits = getattr(config, "max_experiments", 1)
-    if config.simulator:
+    if max_circuits == 1:
+        max_circuits = getattr(config, "max_circuits", 1)
+    if max_circuits == 1 and config.simulator:
         max_circuits = 1024
     info_dict["max_circuits"] = max_circuits
     # Look for faulty qubits.  Renaming to 'inoperable' here

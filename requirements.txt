@@ -4,4 +4,4 @@ cython>=3.0.10
 qiskit>=1.0
 psutil
 orjson>=3.0.0
-runningman
+runningman>=2.1
