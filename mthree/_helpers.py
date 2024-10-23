@@ -15,6 +15,7 @@ Helper functions
 """
 from qiskit.providers.backend import BackendV1
 
+
 def system_info(backend):
     """Return backend information needed by M3.
 
