@@ -37,7 +37,7 @@ jobs:
         else
           python setup.py build_ext --inplace
         fi
-        black mthree
+        black --check mthree
     - name: Run tests with pytest
       run: |
         pip install pytest

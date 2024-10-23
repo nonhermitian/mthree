@@ -13,9 +13,6 @@
 """
 Helper functions
 """
-from qiskit.providers import BackendV2
-from qiskit_ibm_runtime import IBMBackend
-from mthree.exceptions import M3Error
 
 
 def system_info(backend):
@@ -32,15 +29,18 @@ def system_info(backend):
     config = backend.configuration()
     info_dict["name"] = backend.name
     info_dict["num_qubits"] = config.num_qubits
-    _max_shots = backend.configuration().max_shots
+    _max_shots = config.max_shots
     info_dict["max_shots"] = _max_shots if _max_shots else int(1e6)
-
-    if isinstance(backend, IBMBackend):
-        info_dict["simulator"] = False
-    elif isinstance(backend, BackendV2):
+    info_dict["simulator"] = config.simulator
+    if "fake" in backend.name:
         info_dict["simulator"] = True
-    else:
-        raise M3Error("Invalid backend passed.")
+    # max_circuits can be set a couple of ways
+    max_circuits = getattr(config, "max_experiments", 1)
+    if max_circuits == 1:
+        max_circuits = getattr(config, "max_circuits", 1)
+    if max_circuits == 1 and config.simulator:
+        max_circuits = 1024
+    info_dict["max_circuits"] = max_circuits
     # Look for faulty qubits.  Renaming to 'inoperable' here
     if hasattr(backend, "properties"):
         if hasattr(backend.properties(), "faulty_qubits"):

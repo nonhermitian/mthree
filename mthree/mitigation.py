@@ -22,9 +22,8 @@ import logging
 import psutil
 import numpy as np
 import orjson
-from qiskit.providers import BackendV2
-from qiskit_ibm_runtime import SamplerV2
-
+import runningman as rm
+from runningman.utils import is_ibm_backend
 
 from mthree.circuits import (
     _tensor_meas_states,
@@ -61,7 +60,8 @@ class M3Mitigation:
             cal_timestamp (str): Time at which cals were taken
             single_qubit_cals (list): 1Q calibration matrices
         """
-        self.executor = None
+        if is_ibm_backend(system):
+            system = rm.RunningManBackend(system)
         self.system = system
         self.system_info = system_info(system) if system else {}
         self.single_qubit_cals = None
@@ -138,8 +138,8 @@ class M3Mitigation:
         initial_reset=False,
         rep_delay=None,
         cals_file=None,
-        async_cal=False,
-        mode=None,
+        async_cal=True,
+        runtime_mode=None,
     ):
         """Grab calibration data from system.
 
@@ -151,8 +151,8 @@ class M3Mitigation:
             initial_reset (bool): Use resets at beginning of calibration circuits, default=False.
             rep_delay (float): Delay between circuits on IBM Quantum backends.
             cals_file (str): Output path to write JSON calibration data to.
-            async_cal (bool): Do calibration async in a separate thread, default is False.
-            mode (Batch or Session): Mode to run jobs in, default=None
+            async_cal (bool): Do calibration async in a separate thread, default is True.
+            runtime_mode (Batch or Session): Mode to run jobs in if using IBM system, default=None
 
         Returns:
             list: List of jobs submitted.
@@ -160,17 +160,14 @@ class M3Mitigation:
         Raises:
             M3Error: Called while a calibration currently in progress.
         """
-        if mode is not None:
-            executor = SamplerV2(mode=mode)
-            if mode.backend() != self.system.name:
-                raise M3Error(
-                    f"Mode backend {mode.backend()} != M3 backend {self.system.name}"
-                )
-        else:
-            executor = SamplerV2(mode=self.system)
-        self.executor = executor
         if self._thread:
             raise M3Error("Calibration currently in progress.")
+
+        if isinstance(self.system, rm.RunningManBackend):
+            if runtime_mode:
+                self.system.set_mode(runtime_mode, overwrite=True)
+            elif not self.system.get_mode():
+                self.system.set_mode("batch")
         if qubits is None:
             qubits = range(self.num_qubits)
             # Remove faulty qubits if any
@@ -323,8 +320,6 @@ class M3Mitigation:
         """
         if self.system is None:
             raise M3Error("System is not set.  Use 'cals_from_file'.")
-        if self.executor is None:
-            self.executor = SamplerV2(mode=self.system)
         if self.single_qubit_cals is None:
             self.single_qubit_cals = [None] * self.num_qubits
         if self.cal_shots is None:
@@ -397,13 +392,7 @@ class M3Mitigation:
                 )
 
         num_circs = len(trans_qcs)
-        if isinstance(self.system, BackendV2):
-            max_circuits = getattr(self.system.configuration(), "max_circuits", 300)
-            # Needed for https://github.com/Qiskit/qiskit-terra/issues/9947
-            if max_circuits is None:
-                max_circuits = 300
-        else:
-            raise M3Error("Unknown backend type")
+        max_circuits = self.system_info["max_circuits"]
         # Determine the number of jobs required
         num_jobs = ceil(num_circs / max_circuits)
         logger.info(
@@ -420,11 +409,13 @@ class M3Mitigation:
         ] + [trans_qcs[(num_jobs - 1) * circ_slice :]]
         # Do job submission here
         jobs = []
-        if self.rep_delay:
-            self.executor.options.execution.rep_delay = self.rep_delay
-        self.executor.options.environment.job_tags = ["M3 calibration"]
         for circs in circs_list:
-            _job = self.executor.run(circs, shots=shots)
+            _job = self.system.run(
+                circs,
+                shots=shots,
+                rep_delay=self.rep_delay,
+                job_tags=["M3 calibration"],
+            )
             jobs.append(_job)
 
         # Execute job and cal building in new thread.
@@ -763,7 +754,7 @@ def _job_thread(jobs, mit, qubits, num_cal_qubits, cal_strings):
             mit._job_error = error
             return
         else:
-            _counts = [rr.data.c.get_counts() for rr in res]
+            _counts = res.get_counts()
             # _counts can be a list or a dict (if only one circuit was executed within the job)
             if isinstance(_counts, list):
                 counts.extend(_counts)
