@@ -439,7 +439,7 @@ class M3Mitigation:
         distance=None,
         method="auto",
         max_iter=25,
-        tol=1e-3,
+        tol=1e-4,
         return_mitigation_overhead=False,
         details=False,
     ):
@@ -451,7 +451,7 @@ class M3Mitigation:
             distance (int): Distance to correct for. Default=num_bits
             method (str): Solution method: 'auto', 'direct' or 'iterative'.
             max_iter (int): Max. number of iterations, Default=25.
-            tol (float): Convergence tolerance of iterative method, Default=1e-3.
+            tol (float): Convergence tolerance of iterative method, Default=1e-4.
             return_mitigation_overhead (bool): Returns the mitigation overhead, default=False.
             details (bool): Return extra info, default=False.
 
