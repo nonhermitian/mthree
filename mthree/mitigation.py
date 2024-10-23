@@ -165,9 +165,7 @@ class M3Mitigation:
 
         if isinstance(self.system, rm.RunningManBackend):
             if runtime_mode:
-                self.system.set_mode(runtime_mode, overwrite=True)
-            elif not self.system.get_mode():
-                self.system.set_mode("batch")
+                self.system.set_mode(runtime_mode)
         if qubits is None:
             qubits = range(self.num_qubits)
             # Remove faulty qubits if any
