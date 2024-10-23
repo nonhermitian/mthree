@@ -2,11 +2,11 @@ name: Release Artifacts
 on:
   pull_request:
     branches: [2.8]
+
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    environment: release
     permissions:
       id-token: write
     strategy:
@@ -50,7 +50,6 @@ jobs:
     name: Build and Publish Release Artifacts
     needs: [build_wheels]
     runs-on: ubuntu-latest
-    environment: release
     permissions:
       id-token: write
     steps:
