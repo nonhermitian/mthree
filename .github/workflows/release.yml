@@ -1,7 +1,8 @@
 name: Release Artifacts
 on:
-  pull_request:
+  push:
     branches: [2.8]
+
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
