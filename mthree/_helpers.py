@@ -13,7 +13,7 @@
 """
 Helper functions
 """
-
+from qiskit.providers.backend import BackendV1
 
 def system_info(backend):
     """Return backend information needed by M3.
@@ -27,12 +27,16 @@ def system_info(backend):
     info_dict = {}
     info_dict["inoperable_qubits"] = []
     config = backend.configuration()
-    info_dict["name"] = backend.name
+    if isinstance(backend, BackendV1):
+        name = backend.name()
+    else:
+        name = backend.name
+    info_dict["name"] = name
     info_dict["num_qubits"] = config.num_qubits
     _max_shots = config.max_shots
     info_dict["max_shots"] = _max_shots if _max_shots else int(1e6)
     info_dict["simulator"] = config.simulator
-    if "fake" in backend.name:
+    if "fake" in info_dict["name"]:
         info_dict["simulator"] = True
     # max_circuits can be set a couple of ways
     max_circuits = getattr(config, "max_experiments", 1)
