@@ -43,7 +43,7 @@ jobs:
         env:
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
           TWINE_USERNAME: __token__
-        run: twine upload ./wheelhouse/*whl
+        run: twine upload --verbose ./wheelhouse/*whl
   sdist-build:
     name: Build and Publish Release Artifacts
     needs: [build_wheels]
@@ -67,4 +67,4 @@ jobs:
         env:
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
           TWINE_USERNAME: __token__
-        run: twine upload dist/mthree*
+        run: twine upload --verbose dist/mthree*
