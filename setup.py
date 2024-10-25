@@ -84,6 +84,7 @@ if sys.platform == "win32" and os.environ.get("MSYSTEM", None) is None:
 else:
     COMPILER_FLAGS = [
         "-O3",
+        "-ffast-math",
         "-std=c++17",
         "-DNPY_NO_DEPRECATED_API=NPY_1_23_API_VERSION",
     ]
