@@ -4,6 +4,7 @@
 Papers using M3
 ###############
 
+#. "Contextual Subspace Variational Quantum Eigensolver Calculation of the Dissociation Curve of Molecular Nitrogen on a Superconducting Quantum Computer", Tim Weaving, Alexis Ralli, Peter J. Love, Sauro Succi, Peter V. Coveney, `arXiv:2312.04392 <https://doi.org/10.48550/arXiv.2312.04392>`_.
 
 #. "Implementing Quantum Secret Sharing on Current Hardware", Jay Graves, Mike Nelson, Eric Chitambar, `arXiv:2410.11640 <https://doi.org/10.48550/arXiv.2410.11640>`_.
 
