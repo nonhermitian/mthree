@@ -48,33 +48,11 @@ def _marg_meas_states(qubits, num_system_qubits, initial_reset=False):
     return [qc0, qc1]
 
 
-def balanced_cal_strings(num_qubits):
-    """Compute the 2*num_qubits strings for balanced calibration.
-
-    Parameters:
-        num_qubits (int): Number of qubits to be measured.
-
-    Returns:
-        list: List of strings for balanced calibration circuits.
-    """
-    strings = []
-    for rep in range(1, num_qubits + 1):
-        str1 = ""
-        str2 = ""
-        for jj in range(int(np.ceil(num_qubits / rep))):
-            str1 += str(jj % 2) * rep
-            str2 += str((jj + 1) % 2) * rep
-
-        strings.append(str1[:num_qubits])
-        strings.append(str2[:num_qubits])
-    return strings
-
-
-def balanced_cal_circuits(cal_strings, layout, system_qubits, initial_reset=False):
+def balanced_cal_circuits(generator, layout, system_qubits, initial_reset=False):
     """Build balanced calibration circuits.
 
     Parameters:
-        cal_strings (list): List of strings for balanced cal circuits.
+        generator (HadamardGenerator): Generator of balanced cal bit-strings for circuits
         layout (list): Logical to physical qubit layout
         initial_reset (bool): Use resets at beginning of circuit.
         system_qubits (int): Number of qubits in system
@@ -83,16 +61,16 @@ def balanced_cal_circuits(cal_strings, layout, system_qubits, initial_reset=Fals
         list: List of balanced cal circuits.
     """
     circs = []
-    num_active_qubits = len(cal_strings[0])
-    for string in cal_strings:
+    num_active_qubits = generator.num_qubits
+    for bit_array in generator:
         qc = QuantumCircuit(system_qubits, num_active_qubits)
         if initial_reset:
             qc.barrier()
             qc.reset(range(system_qubits))
             qc.reset(range(system_qubits))
             qc.reset(range(system_qubits))
-        for idx, bit in enumerate(string[::-1]):
-            if bit == "1":
+        for idx, bit in enumerate(bit_array[::-1]):
+            if bit == 1:
                 qc.x(layout[idx])
         qc.measure(layout, range(num_active_qubits))
         circs.append(qc)
