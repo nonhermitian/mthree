@@ -5,8 +5,10 @@ Balanced calibrations
 #####################
 
 The default calibration method for M3 is what is called "balanced" calibration.  Balanced calibrations
-sample all independent and pair-wise readout error rates evenly; hence the name "balanced".  To see the
-bit-patterns used to generate the calibration circuits one can call the generator explicitly.  E.g. to
+sample all independent and pair-wise readout error rates evenly; hence the name "balanced".  In M3 v3
+and higher, this routine has been updated to use a method from Bravyi et al, Phys. Rev. A 103, 042605 (2021).
+
+To see the bit-patterns used to generate the calibration circuits one can call the generator explicitly.  E.g. to
 see the strings for 5-qubits one would do 
 
 .. jupyter-execute::
