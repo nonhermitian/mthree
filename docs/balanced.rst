@@ -30,6 +30,8 @@ error rate matches the precison of the other methods.  That is to say that the f
 
  .. jupyter-execute::
 
+    from qiskit_ibm_runtime.fake_provider import FakeAthensV2
+    
     backend = FakeAthensV2()
     mit = mthree.M3Mitigation(backend)
     mit.cals_from_system(method='balanced')
