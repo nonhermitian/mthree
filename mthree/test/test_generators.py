@@ -18,7 +18,7 @@ from mthree.generators import HadamardGenerator
 
 def test_hadamard1():
     """Test Hadamard generator gives even individual qubit sampling"""
-    for integer in range(2, 11):
+    for integer in range(2, 51):
         G = HadamardGenerator(integer)
         bit_arrays = list(G)
         counts = np.zeros(integer, dtype=int)
@@ -26,6 +26,7 @@ def test_hadamard1():
             for idx in range(integer):
                 if arr[idx]:
                     counts[idx] += 1
+        # Number of times '1' is observed on each qubit is the same
         assert len(np.unique(counts)) == 1
 
 
