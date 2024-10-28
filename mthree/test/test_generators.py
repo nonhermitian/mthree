@@ -17,6 +17,19 @@ from mthree.generators import HadamardGenerator
 
 
 def test_hadamard1():
+    """Test Hadamard generator gives even individual qubit sampling"""
+    for integer in range(2, 11):
+        G = HadamardGenerator(integer)
+        bit_arrays = list(G)
+        counts = np.zeros(integer, dtype=int)
+        for arr in bit_arrays:
+            for idx in range(integer):
+                if arr[idx]:
+                    counts[idx] += 1
+        assert len(np.unique(counts)) == 1
+
+
+def test_hadamard2():
     """Test Hadamard generator does even pairwise sampling up to 100 qubit strings"""
     for integer in range(2, 101):
         G = HadamardGenerator(integer)
