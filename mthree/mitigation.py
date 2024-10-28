@@ -25,10 +25,10 @@ import orjson
 import runningman as rm
 from runningman.utils import is_ibm_backend
 
+from mthree.generators import HadamardGenerator
 from mthree.circuits import (
     _tensor_meas_states,
     _marg_meas_states,
-    balanced_cal_strings,
     balanced_cal_circuits,
 )
 from mthree.direct import direct_solver as direct_solve
@@ -320,10 +320,9 @@ class M3Mitigation:
             raise M3Error("System is not set.  Use 'cals_from_file'.")
         if self.single_qubit_cals is None:
             self.single_qubit_cals = [None] * self.num_qubits
-        if self.cal_shots is None:
-            if shots is None:
-                shots = min(self.system_info["max_shots"], 10000)
-            self.cal_shots = shots
+        if shots is None:
+            shots = min(self.system_info["max_shots"], 10000)
+        self.cal_shots = shots
         if self.rep_delay is None:
             self.rep_delay = rep_delay
 
@@ -361,7 +360,7 @@ class M3Mitigation:
             )
 
         num_cal_qubits = len(qubits)
-        cal_strings = []
+        generator = None
         # shots is needed here because balanced cals will use a value
         # different from cal_shots
         shots = self.cal_shots
@@ -371,14 +370,14 @@ class M3Mitigation:
                 qubits, self.num_qubits, initial_reset=initial_reset
             )
         elif method == "balanced":
-            cal_strings = balanced_cal_strings(num_cal_qubits)
+            generator = HadamardGenerator(num_cal_qubits)
             trans_qcs = balanced_cal_circuits(
-                cal_strings, qubits, self.num_qubits, initial_reset=initial_reset
+                generator, qubits, self.num_qubits, initial_reset=initial_reset
             )
-            shots = self.cal_shots // num_cal_qubits
-            if self.cal_shots / num_cal_qubits != shots:
+            shots = 2 * self.cal_shots // generator.length
+            if 2 * self.cal_shots / generator.length != shots:
                 shots += 1
-            self._balanced_shots = shots * num_cal_qubits
+            self._balanced_shots = shots * generator.length
         # Independent
         else:
             trans_qcs = []
@@ -421,12 +420,12 @@ class M3Mitigation:
         if async_cal:
             thread = threading.Thread(
                 target=_job_thread,
-                args=(jobs, self, qubits, num_cal_qubits, cal_strings),
+                args=(jobs, self, qubits, num_cal_qubits, generator),
             )
             self._thread = thread
             self._thread.start()
         else:
-            _job_thread(jobs, self, qubits, num_cal_qubits, cal_strings)
+            _job_thread(jobs, self, qubits, num_cal_qubits, generator)
 
         return jobs
 
@@ -733,7 +732,7 @@ class M3Mitigation:
             raise self._job_error  # pylint: disable=raising-bad-type
 
 
-def _job_thread(jobs, mit, qubits, num_cal_qubits, cal_strings):
+def _job_thread(jobs, mit, qubits, num_cal_qubits, generator):
     """Run the calibration job in a different thread and post-process
 
     Parameters:
@@ -741,7 +740,7 @@ def _job_thread(jobs, mit, qubits, num_cal_qubits, cal_strings):
         mit (M3Mitigator): The mitigator instance
         qubits (list): List of qubits used
         num_cal_qubits (int): Number of calibration qubits
-        cal_strings (list): List of cal strings for balanced cals
+        generator (None or HadamardGenerator): Generator for bit-arrays for balenced cals
     """
     counts = []
     for job in jobs:
@@ -818,20 +817,20 @@ def _job_thread(jobs, mit, qubits, num_cal_qubits, cal_strings):
     else:
         cals = [np.zeros((2, 2), dtype=np.float32) for kk in range(num_cal_qubits)]
 
-        for idx, count in enumerate(counts):
-            target = cal_strings[idx][::-1]
+        for idx, target in enumerate(generator):
+            count = counts[idx]
             good_prep = np.zeros(num_cal_qubits, dtype=np.float32)
             # divide by 2 since total shots is double
-            denom = mit._balanced_shots
-
+            denom = mit._balanced_shots / 2
+            target = target[::-1]
             for key, val in count.items():
                 key = key[::-1]
                 for kk in range(num_cal_qubits):
-                    if key[kk] == target[kk]:
+                    if int(key[kk]) == target[kk]:
                         good_prep[kk] += val
 
             for kk, cal in enumerate(cals):
-                if target[kk] == "0":
+                if target[kk] == 0:
                     cal[0, 0] += good_prep[kk] / denom
                 else:
                     cal[1, 1] += good_prep[kk] / denom

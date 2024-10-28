@@ -70,11 +70,11 @@ def balanced_cal_strings(num_qubits):
     return strings
 
 
-def balanced_cal_circuits(cal_strings, layout, system_qubits, initial_reset=False):
+def balanced_cal_circuits(generator, layout, system_qubits, initial_reset=False):
     """Build balanced calibration circuits.
 
     Parameters:
-        cal_strings (list): List of strings for balanced cal circuits.
+        generator (HadamardGenerator): Generator of balanced cal bit-strings for circuits
         layout (list): Logical to physical qubit layout
         initial_reset (bool): Use resets at beginning of circuit.
         system_qubits (int): Number of qubits in system
@@ -83,16 +83,16 @@ def balanced_cal_circuits(cal_strings, layout, system_qubits, initial_reset=Fals
         list: List of balanced cal circuits.
     """
     circs = []
-    num_active_qubits = len(cal_strings[0])
-    for string in cal_strings:
+    num_active_qubits = generator.num_qubits
+    for bit_array in generator:
         qc = QuantumCircuit(system_qubits, num_active_qubits)
         if initial_reset:
             qc.barrier()
             qc.reset(range(system_qubits))
             qc.reset(range(system_qubits))
             qc.reset(range(system_qubits))
-        for idx, bit in enumerate(string[::-1]):
-            if bit == "1":
+        for idx, bit in enumerate(bit_array[::-1]):
+            if bit == 1:
                 qc.x(layout[idx])
         qc.measure(layout, range(num_active_qubits))
         circs.append(qc)
