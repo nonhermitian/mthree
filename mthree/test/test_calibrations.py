@@ -109,6 +109,17 @@ def test_m3_conversion2():
     assert abs(out[1]-0.766) < 0.02
 
 
+def test_m3_conversion3():
+    """Test that M3 conversion for balanced cals works for permuted orderings"""
+    for _ in range(5):
+        perm = np.random.permutation(range(5))
+        target_idx = np.where(perm == 0)[0][0]
+        cal = Calibration(BACKEND, qubits=perm)
+        cal.run(shots=int(1e4))
+        out = cal.to_m3_calibration()
+        assert abs(out[2*target_idx+1] - 0.766) < 0.02
+
+
 def test_m3_conversion4():
     """Test that M3 conversion works for permuted and subset orderings"""
     cal = Calibration(BACKEND, qubits=[4, 2, 0])
@@ -116,3 +127,14 @@ def test_m3_conversion4():
     out = calibration_to_m3(cal.calibration_data, cal.generator)
     # This checks that Q0 P1->1 value is that corresponding to Q0
     assert abs(out[5]-0.766) < 0.02
+
+
+def test_m3_conversion5():
+    """Test that M3 conversion for independent cals works for permuted orderings"""
+    for _ in range(5):
+        perm = np.random.permutation(range(5))
+        target_idx = np.where(perm == 0)[0][0]
+        cal = Calibration(BACKEND, qubits=perm, method='independent')
+        cal.run(shots=int(1e4))
+        out = cal.to_m3_calibration()
+        assert abs(out[2*target_idx+1] - 0.766) < 0.02
