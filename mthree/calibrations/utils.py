@@ -33,12 +33,12 @@ def m3_legacy_cals(m3_cals, calibration):
     Returns:
         list: Single-qubit A-matrices where index labels the physical qubit
     """
-    num_qubits = calibration.backend_info['num_qubits']
+    num_qubits = calibration.backend_info["num_qubits"]
     out_cals = [None] * num_qubits
     for bit, qubit in calibration.bit_to_physical_mapping.items():
         A = np.zeros((2, 2), dtype=float)
-        A[0, 0] = m3_cals[2*bit]
-        A[1, 1] = m3_cals[2*bit+1]
+        A[0, 0] = m3_cals[2 * bit]
+        A[1, 1] = m3_cals[2 * bit + 1]
         A[1, 0] = 1 - A[0, 0]
         A[0, 1] = 1 - A[1, 1]
         out_cals[qubit] = A

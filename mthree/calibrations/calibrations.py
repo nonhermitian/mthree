@@ -58,14 +58,14 @@ class Calibration:
         self.qubits = qubits
 
         if method is None:
-            if self.backend_info['simulator'] is False:
+            if self.backend_info["simulator"] is False:
                 method = HadamardGenerator(len(self.qubits))
             else:
                 method = IndependentGenerator(len(self.qubits))
         else:
-            if method == 'balanced':
+            if method == "balanced":
                 method = HadamardGenerator(len(self.qubits))
-            elif method == 'independent':
+            elif method == "independent":
                 method = IndependentGenerator(len(self.qubits))
             else:
                 raise M3Error("Invalid method ({method}) given")
@@ -183,7 +183,7 @@ class Calibration:
         self._calibration_data = None
         cal_circuits = self.calibration_circuits()
         self._job_error = None
-        if self.generator.name == 'independent':
+        if self.generator.name == "independent":
             self.shots_per_circuit = shots
         else:
             self.shots_per_circuit = int(-(-shots // (self.generator.length / 2)))
@@ -200,19 +200,19 @@ class Calibration:
             _job_thread(cal_job, self)
 
     def to_m3_calibration(self):
-        """Return calibration data in M3 mitigation format
-        """
+        """Return calibration data in M3 mitigation format"""
         if self.calibration_data is None:
-            raise M3Error('Calibration has no data')
+            raise M3Error("Calibration has no data")
         return calibration_to_m3(self.calibration_data, self.generator)
 
     def to_texmex_calibration(self):
-        """Return calibration data in M3 mitigation format
-        """
+        """Return calibration data in M3 mitigation format"""
         if self.calibration_data is None:
-            raise M3Error('Calibration has no data')
-        if self.generator.name == 'independent':
-            raise M3Error('TexMex calibrations cannot be obtained from an independent calibration')
+            raise M3Error("Calibration has no data")
+        if self.generator.name == "independent":
+            raise M3Error(
+                "TexMex calibrations cannot be obtained from an independent calibration"
+            )
         return calibration_to_texmex(self.calibration_data, self.generator)
 
 
