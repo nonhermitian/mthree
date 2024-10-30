@@ -37,8 +37,8 @@ def calibration_to_texmex(list counts, object generator):
     cdef umap[string, unsigned int].iterator end
     cdef umap[string, unsigned int].iterator it
 
-    cdef umap[string, float].iterator double_end
-    cdef umap[string, float].iterator double_it
+    cdef umap[string, float].iterator float_end
+    cdef umap[string, float].iterator float_it
 
     cdef string old_key, new_key
     cdef unsigned int temp_val, total_counts = 0
@@ -77,11 +77,11 @@ def calibration_to_texmex(list counts, object generator):
             postincrement(it)
 
     # convert counts to probabilies
-    double_end = out_map.end()
-    double_it = out_map.begin()
-    while double_it != double_end:
-        old_key = dereference(double_it).first
+    float_end = out_map.end()
+    float_it = out_map.begin()
+    while float_it != float_end:
+        old_key = dereference(float_it).first
         out_map[old_key] /= total_counts
-        postincrement(double_it)
+        postincrement(float_it)
 
     return out_map
