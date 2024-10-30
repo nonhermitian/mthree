@@ -20,7 +20,7 @@ from qiskit import QuantumCircuit
 
 from mthree.exceptions import M3Error
 from mthree._helpers import system_info
-from mthree.generators import HadamardGenerator, IndependentGenerator
+from mthree.generators import BalancedGenerator, IndependentGenerator
 from .mapping import calibration_mapping
 from .src import calibration_to_m3, calibration_to_texmex
 
@@ -59,12 +59,12 @@ class Calibration:
 
         if method is None:
             if self.backend_info["simulator"] is False:
-                method = HadamardGenerator(len(self.qubits))
+                method = BalancedGenerator(len(self.qubits))
             else:
                 method = IndependentGenerator(len(self.qubits))
         else:
             if method == "balanced":
-                method = HadamardGenerator(len(self.qubits))
+                method = BalancedGenerator(len(self.qubits))
             elif method == "independent":
                 method = IndependentGenerator(len(self.qubits))
             else:

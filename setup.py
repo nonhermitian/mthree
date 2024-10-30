@@ -46,7 +46,7 @@ CYTHON_EXTS = ["converters", "hamming", "matrix", "probability", "matvec"] + [
     "expval",
     "column_testing",
     "converters_testing",
-    "hadamard",
+    "balanced",
     "m3_cals",
     "texmex_cals",
 ]

@@ -13,13 +13,13 @@
 import itertools
 import numpy as np
 
-from mthree.generators import HadamardGenerator
+from mthree.generators import BalancedGenerator
 
 
-def test_hadamard1():
-    """Test Hadamard generator gives even individual qubit sampling"""
+def test_balanced1():
+    """Test balanced generator gives even individual qubit sampling"""
     for integer in range(2, 51):
-        G = HadamardGenerator(integer)
+        G = BalancedGenerator(integer)
         bit_arrays = list(G)
         counts = np.zeros(integer, dtype=int)
         for arr in bit_arrays:
@@ -30,10 +30,10 @@ def test_hadamard1():
         assert len(np.unique(counts)) == 1
 
 
-def test_hadamard2():
-    """Test Hadamard generator does even pairwise sampling up to 100 qubit strings"""
+def test_balanced2():
+    """Test balanced generator does even pairwise sampling up to 100 qubit strings"""
     for integer in range(2, 101):
-        G = HadamardGenerator(integer)
+        G = BalancedGenerator(integer)
         pairwise_dict = {}
         for arr in G:
             for item in itertools.combinations(range(G.num_qubits), 2):

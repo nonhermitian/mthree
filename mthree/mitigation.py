@@ -25,7 +25,7 @@ import orjson
 import runningman as rm
 from runningman.utils import is_ibm_backend
 
-from mthree.generators import HadamardGenerator
+from mthree.generators import BalancedGenerator
 from mthree.circuits import (
     _tensor_meas_states,
     _marg_meas_states,
@@ -370,7 +370,7 @@ class M3Mitigation:
                 qubits, self.num_qubits, initial_reset=initial_reset
             )
         elif method == "balanced":
-            generator = HadamardGenerator(num_cal_qubits)
+            generator = BalancedGenerator(num_cal_qubits)
             trans_qcs = balanced_cal_circuits(
                 generator, qubits, self.num_qubits, initial_reset=initial_reset
             )

@@ -10,7 +10,7 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 # pylint: disable=no-name-in-module
-"""mthree Hadamard array generator"""
+"""mthree Balanced array generator"""
 cimport cython
 
 from libc.stdlib cimport malloc, free
@@ -22,8 +22,8 @@ cimport numpy as np
 from mthree.exceptions import M3Error
 
 
-cdef class HadamardGenerator():
-    """Hadamard calibration generator"""
+cdef class BalancedGenerator():
+    """Balanced calibration generator"""
     cdef public str name
     cdef unsigned int p
     cdef unsigned char * integer_bits
@@ -34,7 +34,7 @@ cdef class HadamardGenerator():
     
     @cython.boundscheck(False)
     def __cinit__(self, unsigned int num_qubits):
-        """Hadamard calibration generator
+        """Balanced calibration generator
         
         Generates a set of bit-arrays that evenly
         sample all independent and pair-wise correlated
@@ -43,7 +43,7 @@ cdef class HadamardGenerator():
         References:
             Bravyi et al, Phys. Rev. A 103, 042605 (2021)
         """
-        self.name = 'hadamard'
+        self.name = 'balanced'
         self.num_qubits = num_qubits
         self.p = <unsigned int>floor(log2(num_qubits)+1)
         self.length = <unsigned int>(2**self.p)

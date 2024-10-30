@@ -13,5 +13,5 @@
 """Generators
 """
 
-from .hadamard import HadamardGenerator
+from .balanced import BalancedGenerator
 from .independent import IndependentGenerator
