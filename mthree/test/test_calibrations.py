@@ -21,7 +21,7 @@ from mthree.calibrations.src import calibration_to_m3, calibration_to_texmex
 
 
 # Qiskit Runtime updated the Fake backends without including that in a release
-# note.  A consequence was that this update changed the readout error value on
+# note.  A consequence was that that update changed the readout error value on
 # Q0 of FakeManilaV2.  This adds that error back to fix the tests.
 BACKEND = FakeManila()
 _ = BACKEND.properties()
