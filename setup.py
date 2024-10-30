@@ -47,9 +47,11 @@ CYTHON_EXTS = ["converters", "hamming", "matrix", "probability", "matvec"] + [
     "column_testing",
     "converters_testing",
     "hadamard",
+    'm3_cals',
+    'texmex_cals'
 ]
-CYTHON_MODULES = ["mthree"] * 6 + ["mthree.test"] * 2 + ["mthree.generators"]
-CYTHON_SOURCE_DIRS = ["mthree"] * 6 + ["mthree/test"] * 2 + ["mthree/generators"]
+CYTHON_MODULES = ["mthree"] * 6 + ["mthree.test"] * 2 + ["mthree.generators"] + ['mthree.calibrations.src'] * 2
+CYTHON_SOURCE_DIRS = ["mthree"] * 6 + ["mthree/test"] * 2 + ["mthree/generators"] + ['mthree/calibrations/src'] * 2
 
 # Add openmp flags
 OPTIONAL_FLAGS = []
