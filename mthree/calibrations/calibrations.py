@@ -15,9 +15,9 @@ import threading
 import warnings
 import datetime
 from dateutil import tz
+from math import ceil
 
 from qiskit import QuantumCircuit
-
 from mthree.exceptions import M3Error
 from mthree._helpers import system_info
 from mthree.generators import BalancedGenerator, IndependentGenerator
@@ -34,8 +34,7 @@ class Calibration:
         Parameters:
             backend (Backend): Target backend
             qubits (array_like): Physical qubits to calibrate over
-            method (str): Name of calibration to use,  Default for real systems is `balanced`,
-                             simulator default is `independent`.
+            method (str): Name of calibration to use,  Default for real systems is `balanced`, simulator default is `independent`.
         """
         self.backend = backend
         self.backend_info = system_info(backend)
@@ -92,7 +91,8 @@ class Calibration:
         """
         __dict__ = super().__getattribute__("__dict__")
         if attr in __dict__:
-            if attr in ["_calibration_data", "timestamp"]:
+            if attr in ["_calibration_data", "timestamp",
+                        "to_m3_calibration", "to_texmex_calibration"]:
                 self._thread_check()
         return super().__getattribute__(attr)
 
@@ -187,17 +187,34 @@ class Calibration:
             self.shots_per_circuit = shots
         else:
             self.shots_per_circuit = int(-(-shots // (self.generator.length / 2)))
-        cal_job = self.backend.run(cal_circuits, shots=self.shots_per_circuit)
-        self.job_id = cal_job.job_id()
+        num_circs = len(cal_circuits)
+        max_circuits = self.backend_info["max_circuits"]
+        num_jobs = ceil(num_circs / max_circuits)
+        circ_slice = ceil(num_circs / num_jobs)
+        circs_list = [
+            cal_circuits[kk * circ_slice : (kk + 1) * circ_slice]
+            for kk in range(num_jobs - 1)
+        ] + [cal_circuits[(num_jobs - 1) * circ_slice :]]
+
+        # Do job submission here
+        jobs = []
+        for circs in circs_list:
+            _job = self.backend.run(
+                circs,
+                shots=self.shots_per_circuit,
+                job_tags=["M3 calibration"],
+            )
+            jobs.append(_job)
         if async_cal:
             thread = threading.Thread(
                 target=_job_thread,
-                args=(cal_job, self),
+                args=(jobs, self),
             )
             self._thread = thread
             self._thread.start()
         else:
-            _job_thread(cal_job, self)
+            _job_thread(jobs, self)
+        return jobs
 
     def to_m3_calibration(self):
         """Return calibration data in M3 mitigation format"""
@@ -216,22 +233,40 @@ class Calibration:
         return calibration_to_texmex(self.calibration_data, self.generator)
 
 
-def _job_thread(job, cal):
+def _job_thread(jobs, cal):
     """Process job result async"""
-    try:
-        res = job.result()
-    # pylint: disable=broad-except
-    except Exception as error:
-        cal._job_error = error
-        return
+    counts = []
+    for job in jobs:
+        try:
+            res = job.result()
+        # pylint: disable=broad-except
+        except Exception as error:
+            cal._job_error = error
+            return
+        else:
+            _counts = res.get_counts()
+            # _counts can be a list or a dict (if only one circuit was executed within the job)
+            if isinstance(_counts, list):
+                counts.extend(_counts)
+            else:
+                counts.append(_counts)
+    cal.calibration_data = counts
+    # attach timestamp for the last job
+    if hasattr(job, "metrics"):
+        timestamp = job.metrics()["timestamps"]["running"]
     else:
-        cal.calibration_data = res.get_counts()
-        timestamp = res.date
-        # Needed since Aer result date is str but IBMQ job is datetime
-        if isinstance(timestamp, datetime.datetime):
-            timestamp = timestamp.isoformat()
-        # Go to UTC times because we are going to use this for
-        # resultsDB storage as well
+        timestamp = None
+    # Timestamp can be None
+    if timestamp is None:
+        timestamp = datetime.datetime.now()
+    # Needed since Aer result date is str but IBMQ job is datetime
+    if isinstance(timestamp, datetime.datetime):
+        timestamp = timestamp.isoformat()
+    # Go to UTC times because we are going to use this for
+    # resultsDB storage as well
+    try:
         dt = datetime.datetime.fromisoformat(timestamp)
-        dt_utc = dt.astimezone(datetime.timezone.utc)
-        cal._timestamp = dt_utc
+    except ValueError:  # For Py < 3.11
+        dt = datetime.datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%S.%fZ")
+    dt_utc = dt.astimezone(datetime.timezone.utc)
+    cal._timestamp = dt_utc
