@@ -70,11 +70,11 @@ class Calibration:
                 raise M3Error("Invalid method ({method}) given")
         self.generator = method
 
-        self.bit_to_physical_mapping = calibration_mapping(
+        self.bit_to_qubit_mapping = calibration_mapping(
             self.backend, qubits=self.qubits
         )
-        self.physical_to_bit_mapping = {
-            val: key for key, val in self.bit_to_physical_mapping.items()
+        self.qubit_to_bit_mapping = {
+            val: key for key, val in self.bit_to_qubit_mapping.items()
         }
         self._calibration_data = None
         self.shots_per_circuit = None
@@ -148,12 +148,12 @@ class Calibration:
                     if val:
                         # Prep and meas zero on qubit
                         qc = QuantumCircuit(self.backend_info["num_qubits"], 1)
-                        qc.measure(self.bit_to_physical_mapping[idx], 0)
+                        qc.measure(self.bit_to_qubit_mapping[idx], 0)
                         out_circuits.append(qc)
                         # Prep and meas one on qubit
                         qc = QuantumCircuit(self.backend_info["num_qubits"], 1)
-                        qc.x(self.bit_to_physical_mapping[idx])
-                        qc.measure(self.bit_to_physical_mapping[idx], 0)
+                        qc.x(self.bit_to_qubit_mapping[idx])
+                        qc.measure(self.bit_to_qubit_mapping[idx], 0)
                         out_circuits.append(qc)
                         break
         else:
@@ -161,8 +161,8 @@ class Calibration:
                 qc = QuantumCircuit(self.backend_info["num_qubits"], creg_length)
                 for idx, val in enumerate(string[::-1]):
                     if val:
-                        qc.x(self.bit_to_physical_mapping[idx])
-                    qc.measure(self.bit_to_physical_mapping[idx], idx)
+                        qc.x(self.bit_to_qubit_mapping[idx])
+                    qc.measure(self.bit_to_qubit_mapping[idx], idx)
                 out_circuits.append(qc)
         return out_circuits
 
