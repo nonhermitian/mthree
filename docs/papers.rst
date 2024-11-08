@@ -4,6 +4,10 @@
 Papers using M3
 ###############
 
+#. "Quantum-centric computation of molecular excited states with extended sample-based quantum diagonalization", Stefano Barison, Javier Robledo Moreno, Mario Motta, `arXiv:2411.00468 <https://doi.org/10.48550/arXiv.2411.00468>`_.
+
+#. "Experimental demonstration of the Bell-type inequalities for four qubit Dicke state using IBM Quantum Processing Unit", Tomis, Harsh Mehta, Shreya Banerjee, Prasanta K. Panigrahi, V. Narayanan, `arXiv:2410.20241 <https://doi.org/10.48550/arXiv.2410.20241>`_.
+
 #. "Contextual Subspace Variational Quantum Eigensolver Calculation of the Dissociation Curve of Molecular Nitrogen on a Superconducting Quantum Computer", Tim Weaving, Alexis Ralli, Peter J. Love, Sauro Succi, Peter V. Coveney, `arXiv:2312.04392 <https://doi.org/10.48550/arXiv.2312.04392>`_.
 
 #. "Implementing Quantum Secret Sharing on Current Hardware", Jay Graves, Mike Nelson, Eric Chitambar, `arXiv:2410.11640 <https://doi.org/10.48550/arXiv.2410.11640>`_.
