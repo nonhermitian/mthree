@@ -4,6 +4,10 @@
 Papers using M3
 ###############
 
+#. "QSRA: A QPU Scheduling and Resource Allocation Approach for Cloud-Based Quantum Computing", Binhan Lu, Zhaoyun Chen, Yuchun Wu, `arXiv:2411.05283 <https://doi.org/10.48550/arXiv.2411.05283>`_.
+
+#. "Towards quantum computing Feynman diagrams in hybrid qubit-oscillator devices", S. Varona, S. Saner, O. Băzăvan, G. Araneda, G. Aarts, A. Bermudez, `arXiv:2411.05092 <https://doi.org/10.48550/arXiv.2411.05092>`_.
+
 #. "Quantum-centric computation of molecular excited states with extended sample-based quantum diagonalization", Stefano Barison, Javier Robledo Moreno, Mario Motta, `arXiv:2411.00468 <https://doi.org/10.48550/arXiv.2411.00468>`_.
 
 #. "Experimental demonstration of the Bell-type inequalities for four qubit Dicke state using IBM Quantum Processing Unit", Tomis, Harsh Mehta, Shreya Banerjee, Prasanta K. Panigrahi, V. Narayanan, `arXiv:2410.20241 <https://doi.org/10.48550/arXiv.2410.20241>`_.
