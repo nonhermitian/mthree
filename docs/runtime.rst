@@ -1,10 +1,10 @@
 .. _runtime:
 
-#############################
-Using Runtime execution modes
-#############################
+##################################
+Use Qiskit Runtime execution modes
+##################################
 
-The Qiskit Runtime has two execution modes, `Batch` and `Session`, that allow for grouping
+Qiskit Runtime has two execution modes, `Batch` and `Session`, that allow for grouping
 multiple jobs.  You can include M3 calibration jobs in these modes using the `runtime_mode` argument 
 in `mthree.M3Mitigation.cals_from_system`.  For example:
 
@@ -21,4 +21,4 @@ in `mthree.M3Mitigation.cals_from_system`.  For example:
     mit.cals_from_system(runtime_mode=batch); # This is where the Batch or Session goes
 
 
-Note that if no `runtime_mode` is set, and the passed system is an IBM backend, then jobs are submitted in `Job` mode, i.e. independently, by default.
+Note that if no `runtime_mode` is set, and the passed system is an IBM&reg; backend, then jobs are submitted in `Job` mode (independently) by default.
