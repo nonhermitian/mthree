@@ -1,10 +1,10 @@
 .. _probs:
 
 ##########################
-Converting to probabilities
+Convert to probabilities
 ##########################
 
-M3 natively works with quasi-probability distributions; distributions that contain negative values
+M3 natively works with quasi-probability distributions, which are distributions that contain negative values
 but nonetheless sum to one.  This is useful for mitigating expectation values, but there could
 be situations where a true probability distribution is useful / needed.  To this end, it is
 possible to find the closest probability distribution to a quasi-probability distribution in
