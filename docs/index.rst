@@ -16,16 +16,16 @@ of equations is nominally much easier to solve.
 
 It is often the case that this linear equation is trivial to solve using LU decomposition,
 using only modest computing resources.  However, if the number of unique bitstrings is large,
-and / or one has very tight memory constraints, then the problem can be solved in a matrix-free
-manner using a preconditioned iterative linear solution method, e.g. the Generalized minimal
+or if you have very tight memory constraints, then the problem can be solved in a matrix-free
+manner using a preconditioned iterative linear solution method &mdash; for example, the generalized minimal
 residual (GMRES) or biconjugate gradient stabilized (BiCGSTAB) methods.
 
 M3 is suitable for problems amenable to using quasi-probabilities such as those
 formulated in terms of expectation values, or sampling problems where, for example, one is
-interested in the bit-string with the highest probability.  Quasi-probabilities can be
+interested in the bitstring with the highest probability.  Quasi-probabilities can be
 projected onto the nearest probability distribution if true probabilities are desired, but
 this makes error analysis more difficult.  M3 works for mid-circuit measurements as well,
-provided that one is interested in ensemble averages, as opposed to correcting single-shot
+provided that you are interested in ensemble averages, as opposed to correcting single-shot
 measurements; it cannot mitigate single-shot measurements used for conditional-gate logic. 
 
 .. tip:: Not sure where to get started?
