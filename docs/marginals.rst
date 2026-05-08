@@ -4,11 +4,11 @@
 Low-weight observables (Marginals)
 ##################################
 
-Often one is interested in computing expectation values of "low-weight" observables, where
-the operator is comprised of one or more identity operators, e.g. :math:`\langle IIZZII\rangle`.
+It is often useful to compute expectation values of "low-weight" observables, where
+the operator is comprised of one or more identity operators, for example, :math:`\langle IIZZII\rangle`.
 Qubits with an identity do not need to be corrected because the eigenvalues associated with the
 :math:`|0\rangle` and :math:`|1\rangle` states are the same.  Because M3 scales with the number of
-bit-strings, removing these unneeded elements can reduce the amount of computation required. Below
+bitstrings, removing these unneeded elements can reduce the amount of computation required. Below
 is an example of how to use M3 to marginalize and correct over the smaller distribution.
 
 Consider the following circuit that we would like to evaluate:
@@ -31,7 +31,7 @@ Consider the following circuit that we would like to evaluate:
     qc.draw('mpl')
 
 
-Let us first map this onto the target system and compute the final measurement mapping:
+We first map this onto the target system and compute the final measurement mapping:
 
 .. jupyter-execute::
 
@@ -48,7 +48,7 @@ actually play a role in the expectation value.  However, we must remember to kee
 physical qubits go to which classical bits.  We can do this with
 :func:`mthree.utils.marginal_distribution`:.
 
-First let us first get a raw distribution:
+First we get a raw distribution:
 
 .. jupyter-execute::
 
@@ -56,7 +56,7 @@ First let us first get a raw distribution:
 
 
 We can get the marginal distributions in two ways.  First we can directly pass a list of indices,
-e.g. for the operator :math:`\langle ZIIZIZ\rangle` the list would be `[0, 2, 5]`:
+for example, for the operator :math:`\langle ZIIZIZ\rangle` the list would be `[0, 2, 5]`:
 
 .. jupyter-execute::
 
@@ -68,8 +68,8 @@ or we can use the operator itself:
 
     mthree.utils.marginal_distribution(counts, 'ZIIZIZ')
 
-Now we have a marginal distribution and in principle we have enough.  However, having a reduced mapping
-of physical qubits that correspond to the bits in the marginal distribution would be handy to have.
+Now we have a marginal distribution and, in principle, we have enough.  However, having a reduced mapping
+of physical qubits that correspond to the bits in the marginal distribution would be useful to have.
 We can pass a mapping to `marginal_distribution` and get such a reduced mapping:
 
 .. jupyter-execute::
@@ -87,7 +87,7 @@ We can now mitigate in a smaller probability space:
     quasi = mit.apply_correction(marginal_counts, reduced_map)
     quasi
 
-Because the only non-identity operators are typically `Z` operators it is easy to compute the
+Because the only non-identity operators are typically `Z` operators, it is easy to compute the
 eigenvalues because the operator will be all `Z`'s:
 
 .. jupyter-execute::
