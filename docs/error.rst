@@ -9,7 +9,7 @@ results in increased uncertainty in the computed results.  M3 will optionally co
 overhead and return an upper-bound on the expected standard deviation (variance) of the
 computed expectation values.
 
-Let us first calibrate the mitigator and get raw results:
+First we calibrate the mitigator and get raw results:
 
 .. jupyter-execute::
 
@@ -42,20 +42,20 @@ Let us first calibrate the mitigator and get raw results:
     raw_counts = backend.run(trans_qc, shots=8192).result().get_counts()
 
 
-In order to compute the standard deviation of our mitigated expectation values
+In order to compute the standard deviation of our mitigated expectation values,
 we need to request the information be computed:
 
 .. jupyter-execute::
 
     quasis = mit.apply_correction(raw_counts, range(6), return_mitigation_overhead=True)
 
-The mitigation overhead is returned as an attribute of the returned quasi-probabilities
+The mitigation overhead is returned as an attribute of the returned quasi-probabilities:
 
 .. jupyter-execute::
 
     quasis.mitigation_overhead
 
-that, together with the number of shots taken, determines the upper-bound on the standard
+That, together with the number of shots taken, determines the upper bound on the standard
 deviation:
 
 .. jupyter-execute::
@@ -68,5 +68,5 @@ It is also possible to return both the expectation value and standard deviation 
 
     quasis.expval_and_stddev()
 
-Although this standard deviation is an upper-bound, it is usually a tight upper-bound that can be
-faithfully used further analysis.
+Although this standard deviation is an upper bound, it is usually a tight upper bound that can be
+faithfully used for further analysis.
