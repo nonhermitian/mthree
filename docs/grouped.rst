@@ -4,8 +4,8 @@
 Grouped operators
 #################
 
-Often times when evaluating expectation values it is possible to group operators
-together if the Pauli operators from which they are comprised commute with each other.  when
+It is often possible when evaluating expectation values to group operators
+together, if the Pauli operators from which they are comprised commute with each other.  When
 possible, this batching can greatly reduce the number of executions needed.  To see how to do
 this consider the following simple example:
 
@@ -45,7 +45,7 @@ We can now mitigate as usual:
     mit.cals_from_system(mappings, shots=10000)
     quasis = mit.apply_correction(counts, mappings, return_mitigation_overhead=True)
 
-Now that we have the final mitigated quasi-distributions we can compute expectation values.
+Now that we have the final mitigated quasi-distributions, we can compute expectation values.
 For batched operators, the expectation values are grouped together based on which quasi-distribution
 you want to evaluate them with:
 
@@ -60,13 +60,13 @@ for expectation values and standard deviations:
 
     quasis.expval_and_stddev([['IIII', 'ZZZZ', '0000', '1111'], ['IIII']])
 
-If you have a single expectation value string then you do not need to wrap it in a list:
+If you have a single expectation value string, you do not need to wrap it in a list:
 
 .. jupyter-execute::
 
     quasis.expval([['IIII', 'ZZZZ', '0000', '1111'], 'IIII'])
 
-Of course probability-distributions work the same way as quasi-distributions:
+Of course, probability distributions work the same way as quasi-distributions:
 
 .. jupyter-execute::
 
