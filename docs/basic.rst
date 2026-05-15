@@ -6,17 +6,17 @@ Basic usage
 
 Using M3 involves three steps (steps one and two can usually be done in reverse order if desired).
 
-    1) Select a system and calibrate over the desired set of qubits.
+    1. Select a backend and calibrate over the desired set of qubits.
 
-    2) Run the circuit(s) of interest on the system.
+    2. Run the circuit(s) of interest on the backend.
 
-    3) Apply the readout correction and post-process.
+    3. Apply the readout correction and post-process.
 
 
 Simple example
 --------------
 Here we use a noisy simulator to perform the three steps above.  First we import the
-needed modules, and construct a circuit of interest.
+needed modules and construct a circuit of interest.
 
 .. jupyter-execute::
 
@@ -36,7 +36,7 @@ needed modules, and construct a circuit of interest.
     qc.measure_all()
     qc.draw('mpl')
 
-Next we calibrate an M3 mitigator instance over qubits 0 -> 6 (Step #1):
+Next we calibrate an M3 mitigator instance over qubits 0 through 6 (Step #1):
 
 .. jupyter-execute::
 
@@ -60,9 +60,10 @@ simply computing the expectation value from the returned quasi-probabilities:
     print('Expectation value:',quasis.expval())
 
 
-Specifying qubits to mitigate over
-----------------------------------
-The circuit above also fits on other systems without SWAP mapping
+Specify qubits to mitigate over
+-------------------------------
+
+The circuit above also fits on other backends without SWAP mapping,
 provided that we select the correct layout.
 
 .. jupyter-execute::
@@ -74,7 +75,7 @@ provided that we select the correct layout.
 
 In our case, ``qubits = [10, 12, 15, 13, 11, 14]`` is an appropriate layout.  Importantly, the
 zeroth entry of the list tells us what physical qubit is readout to generate bit 0 in the output
-bit-strings.  We must pass this list to both the calibration and correction steps of M3.
+bitstrings.  We must pass this list to both the calibration and correction steps of M3.
 
 .. jupyter-execute::
 
