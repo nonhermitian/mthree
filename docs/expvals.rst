@@ -1,17 +1,17 @@
 .. _expvals:
 
-############################
-Obtaining expectation values
-############################
+#########################
+Obtain expectation values
+#########################
 
 Given a quasi- or standard probability distribution, it is possible to compute the
 expectation value of diagonal operators directly from the distributions (or collections)
 of distributions.  This can be done using string representation for standard diagonal
-operators such as ``I``, ``Z``, ``0`` or ``1``, or via dictionaries for custom operators.
+operators such as ``I``, ``Z``, ``0``, or ``1``, or via dictionaries for custom operators.
 
 
-Let us first generate some quasi-distributions by mitigating 2- and 3-qubit GHZ circuits on
-a noisy-simulator.
+Here we first generate some quasi-distributions by mitigating two- and three-qubit GHZ circuits on
+a noisy simulator.
 
 .. jupyter-execute::
 
@@ -47,7 +47,7 @@ a noisy-simulator.
     quasi3 = mit.apply_correction(raw3, [0,1,2], return_mitigation_overhead=True)
 
 
-Now let us compute the expectation values of these distributions for the default
+Now we compute the expectation values of these distributions for the default
 case of ``Z`` operators on each qubit:
 
 .. jupyter-execute::
@@ -80,7 +80,7 @@ We can also pass lists of strings:
     quasi3.expval_and_stddev(['ZZZ','ZIZ'])
 
 Alternatively, users can specify their own custom diagonal operators using dictionaries.  Here
-we form the projectors on the all ones and zeros states:
+we form the projectors on the all-ones and all-zeros states:
 
 .. jupyter-execute::
 
@@ -88,7 +88,7 @@ we form the projectors on the all ones and zeros states:
     all_ones_proj = {'111': 1}
     quasi3.expval(all_zeros_proj)
 
-Like strings, one can pass an array of dicts:
+Like strings, we can pass an array of dicts:
 
 .. jupyter-execute::
 
