@@ -1,8 +1,8 @@
-##################
-mthree (|version|)
-##################
+#######################################
+Matrix-free measurement mitigation (M3)
+#######################################
 
-mthree is a package for scalable quantum measurement error mitigation that need not
+M3 is a package for scalable quantum measurement error mitigation that need not
 explicitly form the assignment matrix, or its inverse, as is thus a **m**\atrix-free
 **m**\easurement **m**\itigation (M3) routine.
 
@@ -32,49 +32,3 @@ measurements; it cannot mitigate single-shot measurements used for conditional-g
    
    Have a look at how others have utilized M3: :ref:`papers`.
 
-
-.. toctree::
-    :maxdepth: 1
-    :hidden:
-
-    self
-    Installation <installation>
-    Citing <citing>
-    Papers using M3 <papers>
-
-.. toctree::
-    :maxdepth: 1
-    :caption: User guide
-    :hidden:
- 
-    Basic usage <basic>
-    Using Runtime modes <runtime>
-    Transpiled circuits <transpiled>
-    Expectation values <expvals>
-    Sampling problems <sampling>
-    Using collections <collections>
-    Grouped operators <grouped>
-    Error analysis <error>
-    Low-weight operators <marginals>
-    Obtaining probabilities <probs>
-    Saving and loading calibrations <cal_io>
-    Utility functions <utils>
-    Balanced calibration <balanced>
-    Advanced usage <advanced>
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Tutorials
-    :hidden:
-    :glob:
-
-    tutorials/*
-
-.. toctree::
-    :maxdepth: 1
-    :caption: API Documentation
-    :hidden:
- 
-    Mitigation class <apidocs/main>
-    Distributions <apidocs/classes>
-    Utility functions <apidocs/utils>
