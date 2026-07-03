@@ -11,12 +11,12 @@
 # that they have been altered from the originals.
 
 """Test inoperable qubits"""
+
 from datetime import datetime
 import pytest
 from qiskit_ibm_runtime.models import BackendProperties
 from qiskit_ibm_runtime.fake_provider import FakeKolkataV2
 import mthree
-
 
 faulty = [1, 3, 5, 7]
 

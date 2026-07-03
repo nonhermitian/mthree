@@ -1,3 +1,4 @@
+setuptools==81.0.0
 qiskit-aer>=0.13
 pytest
 black

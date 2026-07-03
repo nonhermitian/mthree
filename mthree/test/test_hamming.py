@@ -11,6 +11,7 @@
 # that they have been altered from the originals.
 
 """Test Hamming distance truncation"""
+
 import numpy as np
 
 from qiskit_ibm_runtime.fake_provider import FakeKolkataV2 as FakeKolkata

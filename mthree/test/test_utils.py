@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test utils functions"""
+
 import numpy as np
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Statevector
