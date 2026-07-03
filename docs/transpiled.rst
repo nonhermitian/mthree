@@ -1,14 +1,14 @@
 .. _transpiled:
 
 #################################
-Using M3 with transpiled circuits
+Use M3 with transpiled circuits
 #################################
 
 In the :ref:`basic` section we looked at circuits with a qubit layout that
 was known ahead of time.  However, when taking an arbitrary circuit and compiling
 it down to hardware, SWAP mapping permutes qubits such that the final mapping
-between virtual circuit qubits and physical qubits is not a-priori known.
-For example consider the Bernstein-Vazirani circuit
+between virtual circuit qubits and physical qubits is not a priori known.
+For example consider the Bernstein-Vazirani circuit:
 
 .. jupyter-execute::
 
@@ -38,8 +38,8 @@ embed the circuit and we must SWAP map it:
 
 
 We can see from the measurements at the end that what was circuit qubit 0 is now mapped to physical
-qubit 5, circuit qubit 1 is mapped to physical qubit 3, etc...  This information is needed to
-correctly mitigate the final results, yet outside of visually inspecting the circuit there is no
+qubit 5, circuit qubit 1 is mapped to physical qubit 3, and so on.  This information is needed to
+correctly mitigate the final results, but outside of visually inspecting the circuit, there is no
 easy way to obtain this information in Qiskit.  As such, M3 includes the :func:`mthree.utils.final_measurement_mapping`
 routine to compute this for you:
 

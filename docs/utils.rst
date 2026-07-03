@@ -4,7 +4,7 @@
 Utility functions
 #################
 
-There are a couple of functionalities that are needed for easy mitigation, but are not part of the
+The following functionalities are needed for easy mitigation, but are not part of the
 Qiskit SDK and thus are included in M3.  Each is detailed below.
 
 Final-measurement mapping
@@ -36,8 +36,8 @@ and then transpile it:
     trans_qc = transpile(qc, backend, optimization_level=3, seed_transpiler=54321)
     trans_qc.draw('mpl')
 
-Once again we see that the physical qubits used and to which classical bits they map
-to is non-trivial to find.  Yet this information is critical for successfully mitigating
+Once again we see that the physical qubits used, and which classical bits they map
+to, is non-trivial to find.  Yet this information is critical for successfully mitigating
 the results.  This is where the :func:`mthree.utils.final_measurement_mapping` plays
 a critical role:
 
@@ -48,21 +48,21 @@ a critical role:
 
 The keys of this mapping index the classical bits, whereas the
 values tell you which qubits were measured to obtain the bit values.
-The mapping is ordered in terms of the classical bit indices.  You can just pass the
+The mapping is ordered in terms of the classical bit indices.  You can simply pass the
 generated ``mapping`` into M3 functions.
 
 
 Evaluating raw counts data
 ==========================
 
-When mitigating results one often wants to know how much better the results are with
+When mitigating results, it is often useful to know how much better the results are with
 mitigation compared to without.  However, Qiskit does not have great support for
-computing things like expectation values.  So M3 includes the generic functions
+computing things like expectation values.  Therefore, M3 includes the generic functions
 :func:`mthree.utils.expval`, :func:`mthree.utils.stddev`, and
 :func:`mthree.utils.expval_and_stddev` that operate on the native
 ``Counts`` objects in Qiskit.
 
-For example let us compare raw data versus the mitigated results in a simple case.
+For example, here we compare raw data versus the mitigated results in a simple case.
 
 .. jupyter-execute::
 
@@ -85,7 +85,7 @@ For example let us compare raw data versus the mitigated results in a simple cas
     print('Mitigated expval', mit_counts.expval())
 
 
-We can also compare things like upper-bounds on the standard deviation:
+We can also compare things like upper bounds on the standard deviation:
 
 .. jupyter-execute::
 
@@ -105,7 +105,7 @@ and collections :class:`mthree.classes.QuasiCollection` and
     print('These should be equal:', mthree.utils.expval(raw_counts, 'IIII'),
           mit_counts.expval('IIII'))
 
-The routines also allow you to pass the native M3 distributions and collections. E.g.
+The routines also allow you to pass the native M3 distributions and collections. For example:
 
 .. jupyter-execute::
 
@@ -113,7 +113,7 @@ The routines also allow you to pass the native M3 distributions and collections.
 
 
 Finally we note that you can pass multiple values at the same time.  Here we run and
-mitigate 5 circuits:
+mitigate five circuits:
 
 .. jupyter-execute::
 

@@ -5,11 +5,11 @@ Balanced calibrations
 #####################
 
 The default calibration method for M3 is what is called "balanced" calibration.  Balanced calibrations
-sample all independent and pair-wise readout error rates evenly; hence the name "balanced".  In M3 v3
+sample all independent and pair-wise readout error rates evenly, hence the name "balanced".  In M3 v3
 and higher, this routine has been updated to use a method from Bravyi et al, Phys. Rev. A 103, 042605 (2021).
 
-To see the bit-patterns used to generate the calibration circuits one can call the generator explicitly.  E.g. to
-see the strings for 5-qubits one would do 
+To see the bit-patterns used to generate the calibration circuits, we can call the generator explicitly.  For example, to
+see the strings for five qubits: 
 
 .. jupyter-execute::
 
@@ -19,14 +19,14 @@ see the strings for 5-qubits one would do
     list(gen)
 
 
-For every position in the bit-string you will see that `0` or `1` appear an equal number of times,
+For every position in the bitstring you will see that `0` or `1` appear an equal number of times,
 and the same is true for all pair-wise combinations of `0` and `1`.
 If there is a `0`, then that circuit samples the :math:`|0\rangle` state for that qubit,
-similarly for the `1` element.  So when we execute the balanced calibration circuits
+similarly for the `1` element.  Therefore, when we execute the balanced calibration circuits
 using `shots` number of samples, each error rate in the calibration data is actually
-being sampled more times than requested.  Thus, when you pass the `shots` value to M3, in the balanced
-calibration mode internally it divides by the number of measured qubits so that the precision of each
-error rate matches the precision of the other methods.  That is to say that the following:
+being sampled more times than requested.  Thus, when you pass the `shots` value to M3, the balanced
+calibration mode internally divides by the number of measured qubits so that the precision of each
+error rate matches the precision of the other methods.  Consider the following:
 
  .. jupyter-execute::
 
@@ -36,9 +36,9 @@ error rate matches the precision of the other methods.  That is to say that the 
     mit = mthree.M3Mitigation(backend)
     mit.cals_from_system(method='balanced')
 
-Will sample each independent qubit error rate `10000` times (or the max allowed by the target system if less) 
-regardless of which method is used. All pair-wise correlations are measured half this number of times. This
-yields a calibration process whose  overhead is independent of the number of qubits used; there is no additional
+This example samples each independent qubit error rate `10000` times (or the max allowed by the target backend if less) 
+regardless of which method is used. All pair-wise correlations are measured half this number of times. The result is
+a calibration process with an overhead that is independent of the number of qubits used; there is no additional
 cost to compute the calibration over a full device.  Note that, when using a simulator or "fake" device, 
 M3 defaults to `independent` calibration mode for efficiency.  As such, to enable `balanced` calibration on a 
-simulator one must explicitly set the `method`` as done above.
+simulator, you must explicitly set the `method`` as seen in the example above.

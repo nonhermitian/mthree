@@ -216,7 +216,7 @@ Papers using M3
 
 #. "Efficient separate quantification of state preparation errors and measurement errors on quantum computers and their mitigation", Hongye Yu, Tzu-Chieh Wei, `arXiv:2310.18881 <https://doi.org/10.48550/arXiv.2310.18881>`_.
 
-#. "Quantum error mitigation", Zhenyu Cai, Ryan Babbush, Simon C. Benjamin, Suguru Endo, William J. Huggins, Ying Li, Jarrod R. McClean, and Thomas E. O’Brien, `Rev. Mod. Phys. 95, 045005 (2023) <https://doi.org/10.1103/RevModPhys.95.045005>`_.
+#. "Quantum error mitigation", Zhenyu Cai, Ryan Babbush, Simon C. Benjamin, Suguru Endo, William J. Huggins, Ying Li, Jarrod R. McClean, and Thomas E. O'Brien, `Rev. Mod. Phys. 95, 045005 (2023) <https://doi.org/10.1103/RevModPhys.95.045005>`_.
 
 #. "Quantum Simulation for High-Energy Physics", Christian W. Bauer et al., `PRX Quantum 4, 027001 (2023) <https://doi.org/10.1103/PRXQuantum.4.027001>`_.
 
@@ -260,7 +260,7 @@ Papers using M3
 
 #. "Effective calculation of the Green's function in the time domain on near-term quantum processors", Francesco Libbi, Jacopo Rizzo, Francesco Tacchino, Nicola Marzari, and Ivano Tavernelli, `Phys. Rev. Research 4, 043038 (2022) <https://doi.org/10.1103/PhysRevResearch.4.043038>`_.
 
-#. "N-Electron Valence Perturbation Theory with Reference Wave Functions from Quantum Computing: Application to the Relative Stability of Hydroxide Anion and Hydroxyl Radical", Alessandro Tammaro, Davide E. Galli, Julia E. Rice, Mario Motta, `J. Phys. Chem. A 2023, 127, 3, 817–827 <https://doi.org/10.1021/acs.jpca.2c07653>`_.
+#. "N-Electron Valence Perturbation Theory with Reference Wave Functions from Quantum Computing: Application to the Relative Stability of Hydroxide Anion and Hydroxyl Radical", Alessandro Tammaro, Davide E. Galli, Julia E. Rice, Mario Motta, `J. Phys. Chem. A 2023, 127, 3, 817-827 <https://doi.org/10.1021/acs.jpca.2c07653>`_.
 
 #. "Efficient quantum readout-error mitigation for sparse measurement outcomes of near-term quantum devices", Bo Yang, Rudy Raymond, and Shumpei Uno, `Phys. Rev. A 106, 012423 (2022) <https://doi.org/10.1103/PhysRevA.106.012423>`_.
 
@@ -268,7 +268,7 @@ Papers using M3
 
 #. "Hybrid Gate-Pulse Model for Variational Quantum Algorithms", Zhiding Liang; Zhixin Song; Jinglei Cheng; Zichang He; Ji Liu; Hanrui Wang, `60th ACM/IEEE Design Automation Conference (DAC) (2023) <https://doi.org/10.1109/DAC56929.2023.10247923>`_.
 
-#. "Computing the Many-Body Green’s Function with Adaptive Variational Quantum Dynamics", Niladri Gomes, David B. Williams-Young, Wibe A. de Jong, `J. Chem. Theory Comput. 2023, 19, 11, 3313 <https://doi.org/10.1021/acs.jctc.3c00150>`_.
+#. "Computing the Many-Body Green's Function with Adaptive Variational Quantum Dynamics", Niladri Gomes, David B. Williams-Young, Wibe A. de Jong, `J. Chem. Theory Comput. 2023, 19, 11, 3313 <https://doi.org/10.1021/acs.jctc.3c00150>`_.
 
 #. "Characterizing Crosstalk of Superconducting Transmon Processors", Andreas Ketterer and Thomas Wellens, `Phys. Rev. Applied 20, 034065 (2023) <https://doi.org/10.1103/PhysRevApplied.20.034065>`_.
 
@@ -276,7 +276,7 @@ Papers using M3
 
 #. "Configurable Readout Error Mitigation in Quantum Workflows ", Beisel M, Barzen J, Leymann F, Truger F, Weder B, Yussupov V, `Electronics. 2022; 11(19):2983 <https://doi.org/10.3390/electronics11192983>`_.
 
-#. "Quantum Algorithm for Imaginary-Time Green’s Functions", Diksha Dhawan, Dominika Zgid, Mario Motta, `J. Chem. Theory Comput. 2024, 20, 11, 4629 <https://doi.org/10.1021/acs.jctc.4c00241>`_.
+#. "Quantum Algorithm for Imaginary-Time Green's Functions", Diksha Dhawan, Dominika Zgid, Mario Motta, `J. Chem. Theory Comput. 2024, 20, 11, 4629 <https://doi.org/10.1021/acs.jctc.4c00241>`_.
 
 #. "Best Practices for Quantum Error Mitigation with Digital Zero-Noise Extrapolation", Ritajit Majumdar; Pedro Rivero; Friedrike Metz; Areeq Hasan; Derek S. Wang, `2023 IEEE International Conference on Quantum Computing and Engineering (QCE) <https://doi.org/10.1109/QCE57702.2023.00102>`_.
 
@@ -292,7 +292,7 @@ Papers using M3
 
 #. "Quantum Gaussian process regression for Bayesian optimization", Frederic Rapp & Marco Roth, `Quantum Mach. Intell. 6, 5 (2024) <https://doi.org/10.1007/s42484-023-00138-9>`_.
 
-#. "Quantum Ising model on two-dimensional anti–de Sitter space", Muhammad Asaduzzaman, Simon Catterall, Yannick Meurice, and Goksu Can Toga, `Phys. Rev. D 109, 054513 (2024) <https://doi.org/10.1103/PhysRevD.109.054513>`_.
+#. "Quantum Ising model on two-dimensional anti-de Sitter space", Muhammad Asaduzzaman, Simon Catterall, Yannick Meurice, and Goksu Can Toga, `Phys. Rev. D 109, 054513 (2024) <https://doi.org/10.1103/PhysRevD.109.054513>`_.
 
 #. "Advances in Quantum Computation and Quantum Technologies: A Design Automation Perspective", G. De Micheli, J. -H. R. Jiang, R. Rand, K. Smith and M. Soeken, `IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 12, no. 3, pp. 584 (2022) <https://doi.org/10.1109/JETCAS.2022.3205174>`_.
 
@@ -354,11 +354,11 @@ Papers using M3
 
 #. "Error mitigated quantum circuit cutting", Ritajit Majumdar, Christopher J. Wood, `arXiv:2211.13431 <https://doi.org/10.48550/arXiv.2211.13431>`_.
 
-#. "Quantum computation of π → π* and n → π* excited states of aromatic heterocycles", Castellanos, M. A., Motta, M., & Rice, J. E., `Molecular Physics, 122(7–8) (2023) <https://doi.org/10.1080/00268976.2023.2282736>`_.
+#. "Quantum computation of π → π* and n → π* excited states of aromatic heterocycles", Castellanos, M. A., Motta, M., & Rice, J. E., `Molecular Physics, 122(7-8) (2023) <https://doi.org/10.1080/00268976.2023.2282736>`_.
 
 #. "QuCT: A Framework for Analyzing Quantum Circuit by Extracting Contextual and Topological Features", Tan, Siwei and Lang, Congliang and Xiang, Liang and Wang, Shudi and Jia, Xinghui and Tan, Ziqi and Li, Tingting and Yin, Jieming and Shang, Yongheng and Python, Andre and Lu, Liqiang and Yin, Jianwei, `Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture (2023) <https://doi.org/10.1145/3613424.36142746>`_.
 
-#. "Fair Sampling Error Analysis on NISQ Devices", Golden, John and Bartschi, Andreas and O’Malley, Daniel and Eidenbenz, Stephan, `ACM Transactions on Quantum Computing 3, 8 (2022)  <https://doi.org/10.1145/3510857>`_.
+#. "Fair Sampling Error Analysis on NISQ Devices", Golden, John and Bartschi, Andreas and O'Malley, Daniel and Eidenbenz, Stephan, `ACM Transactions on Quantum Computing 3, 8 (2022)  <https://doi.org/10.1145/3510857>`_.
 
 #. "Quantum circuits for discrete graphical models", Piatkowski, N., Zoufal, C., `Quantum Mach. Intell. 6, 37 (2024) <https://doi.org/10.1007/s42484-024-00175-y>`_.
 

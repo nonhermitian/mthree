@@ -1,11 +1,11 @@
 .. _calio:
 
-###################################
-Saving and loading calibration data
-###################################
+##############################
+Save and load calibration data
+##############################
 
 It is possible to save calibration data and, optionally, re-load it at a later time.
-Let us generate some calibration data and save it.
+Here we generate some calibration data and save it.
 
 .. jupyter-execute::
 

@@ -1,10 +1,10 @@
 .. _collections:
 
-##############################
-Using distribution collections
-##############################
+############################
+Use distribution collections
+############################
 
-When you mitigate over multiple circuits the return object is a :class:`mthree.classes.QuasiCollection`
+When you mitigate over multiple circuits, the return object is a :class:`mthree.classes.QuasiCollection`:
 
 .. jupyter-execute::
 
@@ -32,8 +32,8 @@ When you mitigate over multiple circuits the return object is a :class:`mthree.c
     quasis = mit.apply_correction(raw_counts, range(6), return_mitigation_overhead=True)
     type(quasis)
 
-``QuasiCollection`` objects allow one to work with multiple distributions in the same manner as
-a single one.  E.g. we can get the mitigation overhead of the whole collection
+With ``QuasiCollection`` objects, you can work with multiple distributions in the same manner as
+a single one.  For example, we can get the mitigation overhead of the whole collection:
 
 .. jupyter-execute::
 
