@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test cals file IO"""
+
 import os
 import numpy as np
 from qiskit import QuantumCircuit

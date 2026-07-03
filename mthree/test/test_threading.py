@@ -11,6 +11,7 @@
 # that they have been altered from the originals.
 
 """Test QuantumCircuit final measurement mapping"""
+
 import pytest
 from qiskit import QuantumCircuit, transpile
 from qiskit_ibm_runtime.fake_provider import FakeCasablancaV2 as FakeCasablanca

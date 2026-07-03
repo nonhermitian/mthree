@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test matrix elements"""
+
 import numpy as np
 
 from mthree import M3Mitigation

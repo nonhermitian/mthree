@@ -24,6 +24,7 @@ Utility functions
    marginal_distribution
 
 """
+
 import numpy as np
 
 from qiskit.result import marginal_distribution as marg_dist

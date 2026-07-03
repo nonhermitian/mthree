@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test faulty qubits handling"""
+
 import numpy as np
 import pytest
 

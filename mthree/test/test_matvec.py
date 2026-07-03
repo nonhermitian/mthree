@@ -11,6 +11,7 @@
 # that they have been altered from the originals.
 # pylint: disable=no-name-in-module
 """Test matrix elements"""
+
 import numpy as np
 import scipy.sparse.linalg as spla
 from qiskit import QuantumCircuit

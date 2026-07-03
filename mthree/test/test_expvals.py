@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test list inputs"""
+
 import numpy as np
 from mthree.expval import exp_val
 

@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test matrix elements"""
+
 from qiskit import QuantumCircuit, transpile
 
 # Transpiler passes for optimizing dynamic circuits
