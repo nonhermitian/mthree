@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test collection classes"""
+
 import numpy as np
 from qiskit import QuantumCircuit
 from qiskit_ibm_runtime.fake_provider import FakeAthensV2 as FakeAthens

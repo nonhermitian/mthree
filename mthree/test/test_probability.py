@@ -12,6 +12,7 @@
 # pylint: disable=no-name-in-module
 
 """Test conversion to probability distribution"""
+
 import numpy as np
 from mthree.classes import QuasiDistribution
 
