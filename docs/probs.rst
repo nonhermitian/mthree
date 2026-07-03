@@ -1,8 +1,8 @@
 .. _probs:
 
-##########################
+###########################
 Converting to probabilities
-##########################
+###########################
 
 M3 natively works with quasi-probability distributions; distributions that contain negative values
 but nonetheless sum to one.  This is useful for mitigating expectation values, but there could
